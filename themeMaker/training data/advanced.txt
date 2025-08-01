@@ -1,0 +1,201 @@
+# Advanced Theme Features Documentation
+
+### UIView Clipping
+
+Elements extending outside the bounds of a parent UIView are hidden by default.
+
+If you set a box shadow color to white transparent, it will show what is extending outside the bounds of the parent view.
+
+black transparent (default) or any other color besides white transparent, hides anything extending outside the parent UIView. 
+
+## Blur System Properties
+
+### Core Blur Properties
+- `"blurAlpha": "1"` - Controls the intensity of the blur effect (0 = no blur, 1 = full blur)
+- `"blurColor": "light"` or `"blurColor": "dark"` - Sets the blur tint (light for bright backgrounds, dark for dark backgrounds)
+- `"blurIntensity": "10"` - Controls the strength of the blur effect
+
+### Glassmorphism Effect Creation
+The blur creates a glassmorphism effect by combining:
+1. Semi-transparent background colors like `"backgroundColor": "rgba(255,255,255,0.3)"`
+2. Blur effect with `"blurAlpha": "1"`
+3. Border styling with `"borderColor": "rgba(255, 255, 255, 0.35)"`
+
+### Blur Nuances
+1. **Layered Transparency**: Blur works best when combined with semi-transparent backgrounds (`rgba(255,255,255,0.3)`)
+2. **Color Matching**: `blurColor` should match your content - use "light" for dark content on light blur, "dark" for light content on dark blur
+3. **Intensity Stacking**: Different `blurIntensity` values create depth - cards can have different blur strengths
+4. **Border Enhancement**: Subtle borders (`rgba(255, 255, 255, 0.35)`) enhance the glass effect by defining edges
+5. **Performance Consideration**: `blurAlpha: "0"` disables blur entirely, while `blurAlpha: "1"` enables full blur - this is likely for performance optimization
+
+## Conditional Display Properties
+
+### Show/Hide Logic
+- `"showWhenPlaying": "YES"` - Element only appears when music is playing
+- `"showWhenCharging": "NO"` - Element visibility based on charging state
+- `"triggerOnUnlock": "none"` - Controls behavior when device unlocks
+- `"triggerOnWake": "none"` - Controls behavior when device wakes
+
+## Advanced Animation System
+Animation Keyframes
+
+By using the animation keyword trigger: you are able to trigger other view animations. This is essentially just like you tapping the element. 
+
+Here the first animation is called and moves the time to the right. Then the trigger is called. The triggered UIView animation will then play. Using the wait keyword lets you time this second animation. These can be chained indefinitely.
+
+### Complex Animation Syntax
+Toggle means it will replay its animation on second tap. If it moved left 50 from 0 then it will move back to 0 when tapped a second time. If toggle is set to no then it will only animate one way, you must make another animation to have it move again no matter how many times it's pressed.
+
+```json
+"animation": {
+  "card1": "{ x:0,speed:0.2,wait:0,toggle:yes,}",
+  "card2": "{ x:173,speed:0.2,wait:0,toggle:yes,}",
+  "card4": "{ x:173,speed:0.2,wait:0.2,toggle:yes,}"
+}
+```
+
+### Animation Properties
+- `wait:0.2` - Adds delay before animation starts and is placed on the animation not with triggers
+- `toggle:yes` - Animation reverses on second tap
+- `trigger:cardani1` - Triggers another element's animation
+- `transition:easein` - Animation easing type
+- `speed:0.2` - Animation duration (lower = faster)
+
+### Animation Triggers
+Elements can trigger animations in multiple other elements:
+```json
+"animation": {
+  "cardani2": "{ trigger:cardani2,}",
+  "cardani1": "{ trigger:cardani1,}",
+  "cardani4": "{ trigger:cardani4,}",
+  "cardani3": "{ trigger:cardani3,}"
+}
+```
+
+## Layout and Positioning
+
+### Advanced Positioning Methods
+- `"followWidthOffset": "x,y"` - Makes element responsive to parent changes
+- `"followWidthItem": "none"` - Links element sizing to another element
+- `"childorder": "card1,card2,card3,card4"` - Controls z-index/rendering order
+- `"cutWithView": "none"` - Controls clipping behavior
+
+### Container Properties
+- `"maskURL": "none"` - Apply image masks to views
+- `"gradientImage": "none"` - Apply gradient overlays
+
+## Interactive Elements
+
+### User Interaction
+- `"userInteraction": "YES"` - Enables touch interaction (vs "userInteractionEnabled": "NO" on containers)
+- `"actions": "animation"` - Triggers animation on tap
+- `"actions": "openDrawer"` - Opens system app drawer
+- `"actions": "playMusic"` - Controls music playback
+- `"actions": "nextTrack"` - Skip to next track
+
+### Complex Interaction Chains
+One element can trigger animations in multiple other elements, creating sophisticated interactive experiences.
+
+## Image and Media Properties
+
+### Advanced Image Properties
+- `"isAlbumArt": "yes"` - Dynamically loads current music album art
+- `"pauseImage": "pause.png"` - Alternative image for different states
+- `"contentMode": "scaleAspectFit"` - Controls image scaling
+- `"imageFolder": "none"` - Specifies image folder location
+- `"imageIsBlack": "none"` - Image color treatment
+- `"imageColor": "none"` - Tint color for images
+
+### SF Symbols Integration
+- `"SFSymbolName": "airpodspro"` - Uses iOS SF Symbols
+- `"SFColor": "rgba(255,255,255,1)"` - Color for SF Symbols
+- `"SFWeight": "none"` - Weight of SF Symbols
+
+## App Icon Properties
+
+### Badge System
+- `"badgeBGColor": "rgba(51, 51, 51, 0.70)"` - Badge background color
+- `"badgeTextColor": "rgba(255,255,255,1)"` - Badge text color
+- `"badgeImage": "none"` - Custom badge image
+- `"badgeImageX": "0"` - Badge image X offset
+- `"badgeImageY": "0"` - Badge image Y offset
+- `"badgeImageScale": "1"` - Badge image scaling
+- `"labelColor": "rgba(255, 255, 255, 0.00)"` - App name label color (often hidden)
+
+## Best Practices for Advanced Features
+
+### Performance Optimization
+- Use `blurAlpha: "0"` to disable blur on non-essential elements
+- Limit the number of animated elements active simultaneously
+- Use `showWhenPlaying` and similar conditionals to reduce always-active elements
+
+### Visual Hierarchy
+- Layer different blur intensities to create depth
+- Use `childorder` to control element stacking
+- Combine transparency, blur, and borders for premium glass effects
+
+### Interactive Design
+- Use `toggle:yes` for reversible interactions
+- Implement `wait` delays for staggered animation effects
+- Chain animations across elements for fluid user experiences
+
+## Common Patterns
+
+### Glassmorphism Card
+```json
+{
+  "backgroundColor": "rgba(255,255,255,0.3)",
+  "blurAlpha": "1",
+  "blurColor": "light",
+  "blurIntensity": "10",
+  "borderWidth": "1",
+  "borderColor": "rgba(255, 255, 255, 0.35)",
+  "cornerRadius": "20",
+  "boxShadow": {
+      "color": "rgba(0, 0, 0, 0.00)"  // Must be 0.00
+    }
+}
+```
+
+### Sliding Animation
+```json
+{
+  "actions": "animation",
+  "animation": {
+    "elementName": "{ x:200, speed:0.3, toggle:yes }"
+  }
+}
+```
+
+### Triggers
+
+triggerOnUnlock: Purpose: Animates a theme set to the SpringBoard (SB) when the Lock Screen (LS) is unlocked.
+Behavior: Triggers Animation 1 when the device is unlocked (LS dismissed).
+Triggers Animation 2 when the device is locked or the LS is shown.
+Requirement: Both animations are needed to play on unlock and reset the position on lock for consistent behavior.
+triggerOnWake: Purpose: Animates a theme set to the Lock Screen (LS).
+Behavior: Triggers animation when the device wakes, the screen dims, or the LS is dismissed (device unlocked).
+Similar to triggerOnUnlock but tied to LS events and wake/dim states.
+
+### Show when playing
+showWhenPlaying: A feature to control animations for a music player UI based on playback state.
+Functionality: Instead of a simple YES/NO toggle, define two triggers: triggerOn:view1 and triggerOff:view2.
+view1: Triggers animations (e.g., moving the music player to the center) when music is playing.
+view2: Triggers animations (e.g., moving the music player to x:0, off-screen) when music is not playing.
+Purpose: Dynamically animate the music player’s position based on playback state.
+Ideal Setup: Start with the music player off-screen, then use view1 and view2 animations to move it on/off-screen for smooth transitions.
+
+
+### Conditional Music Element
+```json
+{
+  "showWhenPlaying": "YES",
+  "actions": "playMusic"
+}
+```
+
+
+### Follow width item
+
+A UI pattern where a secondary view (e.g., a label) tracks the edge of a primary view (e.g., a battery or progress bar) as its width changes. Both views must be in the same container UIView. The secondary view is set to "followWidthItem," linking it to the primary view, and moves with its edge as the width updates. A FollowWidthOffset adjusts the secondary view’s position. Used in battery bars, progress bars, etc. 
+

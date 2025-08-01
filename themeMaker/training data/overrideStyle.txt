@@ -1,0 +1,29 @@
+Understanding overrideStyle:
+
+The overrideStyle feature is a powerful tool that lets you create consistent styling across multiple app icons with minimal effort.
+
+How It Works
+
+When you set an element's overrideStyle property to another element's name, it inherits some of that element's styling properties. Think of it as creating a style template that other elements can reference.
+
+With overrideStyle: 
+
+You style one, "master" app (let's call it "styleApp") with your desired appearance
+
+Set the other 9 icons overrideStyle property to "styleApp"
+
+All 9 icons instantly inherit the styleApps element styles (width, height, scale, labelColor, badgeTextColor, badgeBackgroundColor, badgeImage, badgeImageScale, badgeImageX, badgeImageY)
+
+Key Benefits
+
+- Bulk Updates: Change the master element's style, and all linked elements update automatically
+
+- Consistency: Ensures all your icons maintain the same visual style
+
+- Time Saving: No need to manually style each element individually
+
+- Easy Maintenance: One place to make style changes instead of many
+
+Gotchas
+
+You have to set all icons overrideStyle property, besides the masterApp. To make this easier, make the app1 and set its overrideStyle to whatever your style app name is. Then duplicate the app1. This retains that overrideStyle property and you don't have to set it on all apps.

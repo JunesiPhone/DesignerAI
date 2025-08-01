@@ -1,0 +1,1220 @@
+{
+  "PresetView" : {
+    "frame" : {
+      "y" : "0",
+      "userInteractionEnabled" : "NO",
+      "x" : "0",
+      "width" : "screen_width",
+      "height" : "screen_height"
+    },
+    "order" : [
+      "bg",
+      "MainContainer",
+      "dock"
+    ],
+    "type" : "UIView",
+    "children" : {
+      "bg" : {
+        "boxShadow" : {
+          "y" : "3",
+          "color" : "rgba(0,0,0,0)",
+          "x" : "0",
+          "radius" : "3"
+        },
+        "blurColor" : "dark",
+        "frame" : {
+          "y" : "center",
+          "x" : "center",
+          "width" : "screen_width",
+          "height" : "screen_height"
+        },
+        "triggerOnUnlock" : "none",
+        "showWhenCharging" : "NO",
+        "borderWidth" : "0",
+        "backgroundColor" : "rgba(0, 0, 0, 0.60)",
+        "autoLayout" : "none",
+        "showWhenPlaying" : "NO",
+        "followWidthOffset" : "x,y",
+        "blurAlpha" : "0",
+        "cornerRadius" : "5",
+        "type" : "UIView",
+        "childorder" : "none",
+        "rotate" : "0",
+        "blurIntensity" : "10",
+        "alpha" : "1",
+        "triggerOnWake" : "none",
+        "scale" : "0",
+        "gradientImage" : "none",
+        "maskURL" : "none",
+        "followWidthItem" : "none",
+        "cutWithView" : "none",
+        "borderColor" : "rgba(255,255,255,0)",
+        "actions" : "none",
+        "userInteraction" : "YES",
+        "animation" : "none"
+      },
+      "MainContainer" : {
+        "children" : {
+          "HorizontalScrollView" : {
+            "frame" : {
+              "y" : "center",
+              "x" : "0",
+              "width" : "screen_width",
+              "height" : "160"
+            },
+            "children" : {
+              "WeatherSection" : {
+                "children" : {
+                  "WeatherDot" : {
+                    "frame" : {
+                      "y" : "20",
+                      "x" : "8",
+                      "width" : "4",
+                      "height" : "4"
+                    },
+                    "backgroundColor" : "rgba(255,180,100,1.0)",
+                    "type" : "UIView",
+                    "borderWidth" : "0",
+                    "cornerRadius" : "2"
+                  },
+                  "WeatherLabel" : {
+                    "fontSize" : "11",
+                    "textAlignment" : "NSTextAlignmentLeft",
+                    "numberOfLines" : "1",
+                    "frame" : {
+                      "y" : "10",
+                      "x" : "20",
+                      "width" : "100",
+                      "height" : "20"
+                    },
+                    "data" : "WEATHER",
+                    "fontName" : "HelveticaNeue-Light",
+                    "borderWidth" : "0",
+                    "type" : "UILabel",
+                    "textColor" : "rgba(120,120,130,1.0)",
+                    "backgroundColor" : "rgba(255,255,255,0)"
+                  },
+                  "WeatherTopLine" : {
+                    "frame" : {
+                      "y" : "0",
+                      "x" : "10",
+                      "width" : "1",
+                      "height" : "20"
+                    },
+                    "backgroundColor" : "rgba(80,80,90,1.0)",
+                    "type" : "UIView",
+                    "borderWidth" : "0",
+                    "cornerRadius" : "0"
+                  },
+                  "WeatherBottomLine" : {
+                    "frame" : {
+                      "y" : "24",
+                      "x" : "10",
+                      "width" : "1",
+                      "height" : "136"
+                    },
+                    "backgroundColor" : "rgba(80,80,90,1.0)",
+                    "type" : "UIView",
+                    "borderWidth" : "0",
+                    "cornerRadius" : "0"
+                  },
+                  "TempValue" : {
+                    "fontSize" : "44",
+                    "textAlignment" : "NSTextAlignmentLeft",
+                    "numberOfLines" : "1",
+                    "frame" : {
+                      "y" : "35",
+                      "x" : "20",
+                      "width" : "110",
+                      "height" : "60"
+                    },
+                    "data" : "[temperature]°",
+                    "fontName" : "HelveticaNeue-UltraLight",
+                    "borderWidth" : "0",
+                    "type" : "UILabel",
+                    "textColor" : "rgba(255,255,255,1.0)",
+                    "backgroundColor" : "rgba(255,255,255,0)"
+                  },
+                  "WeatherIcon" : {
+                    "frame" : {
+                      "y" : "35",
+                      "x" : "140",
+                      "width" : "40",
+                      "height" : "40"
+                    },
+                    "forecast" : "current",
+                    "type" : "WeatherIcon",
+                    "iconSet" : "clima"
+                  },
+                  "ConditionValue" : {
+                    "fontSize" : "14",
+                    "textAlignment" : "NSTextAlignmentLeft",
+                    "numberOfLines" : "1",
+                    "frame" : {
+                      "y" : "105",
+                      "x" : "20",
+                      "width" : "160",
+                      "height" : "20"
+                    },
+                    "data" : "[condition]",
+                    "fontName" : "HelveticaNeue-Light",
+                    "borderWidth" : "0",
+                    "type" : "UILabel",
+                    "textColor" : "rgba(180,180,190,1.0)",
+                    "backgroundColor" : "rgba(255,255,255,0)"
+                  },
+                  "ForecastContainer" : {
+                    "children" : {
+                      "Day1" : {
+                        "children" : {
+                          "Day1Icon" : {
+                            "frame" : {
+                              "y" : "0",
+                              "x" : "0",
+                              "width" : "14",
+                              "height" : "14"
+                            },
+                            "forecast" : "day1",
+                            "type" : "WeatherIcon",
+                            "iconSet" : "clima"
+                          },
+                          "Day1Temp" : {
+                            "fontSize" : "9",
+                            "textAlignment" : "NSTextAlignmentCenter",
+                            "numberOfLines" : "1",
+                            "frame" : {
+                              "y" : "16",
+                              "x" : "0",
+                              "width" : "14",
+                              "height" : "12"
+                            },
+                            "data" : "[day1high]",
+                            "fontName" : "HelveticaNeue-Light",
+                            "borderWidth" : "0",
+                            "type" : "UILabel",
+                            "textColor" : "rgba(160,160,170,1.0)",
+                            "backgroundColor" : "rgba(255,255,255,0)"
+                          }
+                        },
+                        "frame" : {
+                          "y" : "0",
+                          "x" : "0",
+                          "width" : "14",
+                          "height" : "28"
+                        },
+                        "backgroundColor" : "rgba(255,255,255,0)",
+                        "type" : "UIView",
+                        "borderWidth" : "0",
+                        "cornerRadius" : "0"
+                      },
+                      "Day2" : {
+                        "children" : {
+                          "Day2Icon" : {
+                            "frame" : {
+                              "y" : "0",
+                              "x" : "0",
+                              "width" : "14",
+                              "height" : "14"
+                            },
+                            "forecast" : "day2",
+                            "type" : "WeatherIcon",
+                            "iconSet" : "clima"
+                          },
+                          "Day2Temp" : {
+                            "fontSize" : "9",
+                            "textAlignment" : "NSTextAlignmentCenter",
+                            "numberOfLines" : "1",
+                            "frame" : {
+                              "y" : "16",
+                              "x" : "0",
+                              "width" : "14",
+                              "height" : "12"
+                            },
+                            "data" : "[day2high]",
+                            "fontName" : "HelveticaNeue-Light",
+                            "borderWidth" : "0",
+                            "type" : "UILabel",
+                            "textColor" : "rgba(160,160,170,1.0)",
+                            "backgroundColor" : "rgba(255,255,255,0)"
+                          }
+                        },
+                        "frame" : {
+                          "y" : "0",
+                          "x" : "20",
+                          "width" : "14",
+                          "height" : "28"
+                        },
+                        "backgroundColor" : "rgba(255,255,255,0)",
+                        "type" : "UIView",
+                        "borderWidth" : "0",
+                        "cornerRadius" : "0"
+                      },
+                      "Day3" : {
+                        "children" : {
+                          "Day3Icon" : {
+                            "frame" : {
+                              "y" : "0",
+                              "x" : "0",
+                              "width" : "14",
+                              "height" : "14"
+                            },
+                            "forecast" : "day3",
+                            "type" : "WeatherIcon",
+                            "iconSet" : "clima"
+                          },
+                          "Day3Temp" : {
+                            "fontSize" : "9",
+                            "textAlignment" : "NSTextAlignmentCenter",
+                            "numberOfLines" : "1",
+                            "frame" : {
+                              "y" : "16",
+                              "x" : "0",
+                              "width" : "14",
+                              "height" : "12"
+                            },
+                            "data" : "[day3high]",
+                            "fontName" : "HelveticaNeue-Light",
+                            "borderWidth" : "0",
+                            "type" : "UILabel",
+                            "textColor" : "rgba(160,160,170,1.0)",
+                            "backgroundColor" : "rgba(255,255,255,0)"
+                          }
+                        },
+                        "frame" : {
+                          "y" : "0",
+                          "x" : "40",
+                          "width" : "14",
+                          "height" : "28"
+                        },
+                        "backgroundColor" : "rgba(255,255,255,0)",
+                        "type" : "UIView",
+                        "borderWidth" : "0",
+                        "cornerRadius" : "0"
+                      },
+                      "Day4" : {
+                        "children" : {
+                          "Day4Icon" : {
+                            "frame" : {
+                              "y" : "0",
+                              "x" : "0",
+                              "width" : "14",
+                              "height" : "14"
+                            },
+                            "forecast" : "day4",
+                            "type" : "WeatherIcon",
+                            "iconSet" : "clima"
+                          },
+                          "Day4Temp" : {
+                            "fontSize" : "9",
+                            "textAlignment" : "NSTextAlignmentCenter",
+                            "numberOfLines" : "1",
+                            "frame" : {
+                              "y" : "16",
+                              "x" : "0",
+                              "width" : "14",
+                              "height" : "12"
+                            },
+                            "data" : "[day4high]",
+                            "fontName" : "HelveticaNeue-Light",
+                            "borderWidth" : "0",
+                            "type" : "UILabel",
+                            "textColor" : "rgba(160,160,170,1.0)",
+                            "backgroundColor" : "rgba(255,255,255,0)"
+                          }
+                        },
+                        "frame" : {
+                          "y" : "0",
+                          "x" : "60",
+                          "width" : "14",
+                          "height" : "28"
+                        },
+                        "backgroundColor" : "rgba(255,255,255,0)",
+                        "type" : "UIView",
+                        "borderWidth" : "0",
+                        "cornerRadius" : "0"
+                      }
+                    },
+                    "frame" : {
+                      "y" : "130",
+                      "x" : "20",
+                      "width" : "74",
+                      "height" : "28"
+                    },
+                    "backgroundColor" : "rgba(255,255,255,0)",
+                    "type" : "UIView",
+                    "borderWidth" : "0",
+                    "cornerRadius" : "0"
+                  }
+                },
+                "frame" : {
+                  "y" : "0",
+                  "x" : "880",
+                  "width" : "200",
+                  "height" : "160"
+                },
+                "backgroundColor" : "rgba(255,255,255,0)",
+                "type" : "UIView",
+                "borderWidth" : "0",
+                "cornerRadius" : "0"
+              },
+              "DateSection" : {
+                "children" : {
+                  "DayValue" : {
+                    "fontSize" : "28",
+                    "textAlignment" : "NSTextAlignmentLeft",
+                    "numberOfLines" : "1",
+                    "frame" : {
+                      "y" : "35",
+                      "x" : "20",
+                      "width" : "180",
+                      "height" : "35"
+                    },
+                    "data" : "[day]",
+                    "fontName" : "HelveticaNeue-Light",
+                    "borderWidth" : "0",
+                    "type" : "UILabel",
+                    "textColor" : "rgba(255,255,255,1.0)",
+                    "backgroundColor" : "rgba(255,255,255,0)"
+                  },
+                  "YearValue" : {
+                    "fontSize" : "14",
+                    "textAlignment" : "NSTextAlignmentLeft",
+                    "numberOfLines" : "1",
+                    "frame" : {
+                      "y" : "105",
+                      "x" : "20",
+                      "width" : "60",
+                      "height" : "20"
+                    },
+                    "data" : "[year]",
+                    "fontName" : "HelveticaNeue-Light",
+                    "borderWidth" : "0",
+                    "type" : "UILabel",
+                    "textColor" : "rgba(140,140,150,1.0)",
+                    "backgroundColor" : "rgba(255,255,255,0)"
+                  },
+                  "DateDot" : {
+                    "frame" : {
+                      "y" : "20",
+                      "x" : "8",
+                      "width" : "4",
+                      "height" : "4"
+                    },
+                    "backgroundColor" : "rgba(100,150,255,1.0)",
+                    "type" : "UIView",
+                    "borderWidth" : "0",
+                    "cornerRadius" : "2"
+                  },
+                  "DateTopLine" : {
+                    "frame" : {
+                      "y" : "0",
+                      "x" : "10",
+                      "width" : "1",
+                      "height" : "20"
+                    },
+                    "backgroundColor" : "rgba(80,80,90,1.0)",
+                    "type" : "UIView",
+                    "borderWidth" : "0",
+                    "cornerRadius" : "0"
+                  },
+                  "DateBottomLine" : {
+                    "frame" : {
+                      "y" : "24",
+                      "x" : "10",
+                      "width" : "1",
+                      "height" : "136"
+                    },
+                    "backgroundColor" : "rgba(80,80,90,1.0)",
+                    "type" : "UIView",
+                    "borderWidth" : "0",
+                    "cornerRadius" : "0"
+                  },
+                  "DateLabel" : {
+                    "fontSize" : "11",
+                    "textAlignment" : "NSTextAlignmentLeft",
+                    "numberOfLines" : "1",
+                    "frame" : {
+                      "y" : "10",
+                      "x" : "20",
+                      "width" : "80",
+                      "height" : "20"
+                    },
+                    "data" : "DATE",
+                    "fontName" : "HelveticaNeue-Light",
+                    "borderWidth" : "0",
+                    "type" : "UILabel",
+                    "textColor" : "rgba(120,120,130,1.0)",
+                    "backgroundColor" : "rgba(255,255,255,0)"
+                  },
+                  "DateValue" : {
+                    "fontSize" : "18",
+                    "textAlignment" : "NSTextAlignmentLeft",
+                    "numberOfLines" : "1",
+                    "frame" : {
+                      "y" : "75",
+                      "x" : "20",
+                      "width" : "180",
+                      "height" : "25"
+                    },
+                    "data" : "[month] [date]",
+                    "fontName" : "HelveticaNeue-Light",
+                    "borderWidth" : "0",
+                    "type" : "UILabel",
+                    "textColor" : "rgba(200,200,210,1.0)",
+                    "backgroundColor" : "rgba(255,255,255,0)"
+                  }
+                },
+                "frame" : {
+                  "y" : "0",
+                  "x" : "320",
+                  "width" : "200",
+                  "height" : "160"
+                },
+                "backgroundColor" : "rgba(255,255,255,0)",
+                "type" : "UIView",
+                "borderWidth" : "0",
+                "cornerRadius" : "0"
+              },
+              "TimeSection" : {
+                "children" : {
+                  "TimeTopLine" : {
+                    "frame" : {
+                      "y" : "0",
+                      "x" : "10",
+                      "width" : "1",
+                      "height" : "20"
+                    },
+                    "backgroundColor" : "rgba(80,80,90,1.0)",
+                    "type" : "UIView",
+                    "borderWidth" : "0",
+                    "cornerRadius" : "0"
+                  },
+                  "TimeDot" : {
+                    "frame" : {
+                      "y" : "20",
+                      "x" : "8",
+                      "width" : "4",
+                      "height" : "4"
+                    },
+                    "backgroundColor" : "rgba(255,100,100,1.0)",
+                    "type" : "UIView",
+                    "borderWidth" : "0",
+                    "cornerRadius" : "2"
+                  },
+                  "TimeValue" : {
+                    "fontSize" : "52",
+                    "textAlignment" : "NSTextAlignmentLeft",
+                    "numberOfLines" : "1",
+                    "frame" : {
+                      "y" : "35",
+                      "x" : "20",
+                      "width" : "180",
+                      "height" : "70"
+                    },
+                    "data" : "[paddedhour]:[minute]",
+                    "fontName" : "HelveticaNeue-UltraLight",
+                    "borderWidth" : "0",
+                    "type" : "UILabel",
+                    "textColor" : "rgba(255,255,255,1.0)",
+                    "backgroundColor" : "rgba(255,255,255,0)"
+                  },
+                  "TimeBottomLine" : {
+                    "frame" : {
+                      "y" : "24",
+                      "x" : "10",
+                      "width" : "1",
+                      "height" : "136"
+                    },
+                    "backgroundColor" : "rgba(80,80,90,1.0)",
+                    "type" : "UIView",
+                    "borderWidth" : "0",
+                    "cornerRadius" : "0"
+                  },
+                  "TimeLabel" : {
+                    "fontSize" : "11",
+                    "textAlignment" : "NSTextAlignmentLeft",
+                    "numberOfLines" : "1",
+                    "frame" : {
+                      "y" : "10",
+                      "x" : "20",
+                      "width" : "80",
+                      "height" : "20"
+                    },
+                    "data" : "TIME",
+                    "fontName" : "HelveticaNeue-Light",
+                    "borderWidth" : "0",
+                    "type" : "UILabel",
+                    "textColor" : "rgba(120,120,130,1.0)",
+                    "backgroundColor" : "rgba(255,255,255,0)"
+                  },
+                  "AMPMLabel" : {
+                    "fontSize" : "14",
+                    "textAlignment" : "NSTextAlignmentLeft",
+                    "numberOfLines" : "1",
+                    "frame" : {
+                      "y" : "110",
+                      "x" : "20",
+                      "width" : "40",
+                      "height" : "20"
+                    },
+                    "data" : "[ampm]",
+                    "fontName" : "HelveticaNeue-Light",
+                    "borderWidth" : "0",
+                    "type" : "UILabel",
+                    "textColor" : "rgba(160,160,170,1.0)",
+                    "backgroundColor" : "rgba(255,255,255,0)"
+                  }
+                },
+                "frame" : {
+                  "y" : "0",
+                  "x" : "40",
+                  "width" : "200",
+                  "height" : "160"
+                },
+                "backgroundColor" : "rgba(255,255,255,0)",
+                "type" : "UIView",
+                "borderWidth" : "0",
+                "cornerRadius" : "0"
+              },
+              "BatterySection" : {
+                "children" : {
+                  "BatteryDot" : {
+                    "frame" : {
+                      "y" : "20",
+                      "x" : "8",
+                      "width" : "4",
+                      "height" : "4"
+                    },
+                    "backgroundColor" : "rgba(100,255,150,1.0)",
+                    "type" : "UIView",
+                    "borderWidth" : "0",
+                    "cornerRadius" : "2"
+                  },
+                  "BatteryBottomLine" : {
+                    "frame" : {
+                      "y" : "24",
+                      "x" : "10",
+                      "width" : "1",
+                      "height" : "136"
+                    },
+                    "backgroundColor" : "rgba(80,80,90,1.0)",
+                    "type" : "UIView",
+                    "borderWidth" : "0",
+                    "cornerRadius" : "0"
+                  },
+                  "BatteryTopLine" : {
+                    "frame" : {
+                      "y" : "0",
+                      "x" : "10",
+                      "width" : "1",
+                      "height" : "20"
+                    },
+                    "backgroundColor" : "rgba(80,80,90,1.0)",
+                    "type" : "UIView",
+                    "borderWidth" : "0",
+                    "cornerRadius" : "0"
+                  },
+                  "BatteryValue" : {
+                    "fontSize" : "44",
+                    "textAlignment" : "NSTextAlignmentLeft",
+                    "numberOfLines" : "1",
+                    "frame" : {
+                      "y" : "35",
+                      "x" : "20",
+                      "width" : "180",
+                      "height" : "60"
+                    },
+                    "data" : "[batterypercent]%",
+                    "fontName" : "HelveticaNeue-UltraLight",
+                    "borderWidth" : "0",
+                    "type" : "UILabel",
+                    "textColor" : "rgba(255,255,255,1.0)",
+                    "backgroundColor" : "rgba(255,255,255,0)"
+                  },
+                  "BatteryLabel" : {
+                    "fontSize" : "11",
+                    "textAlignment" : "NSTextAlignmentLeft",
+                    "numberOfLines" : "1",
+                    "frame" : {
+                      "y" : "10",
+                      "x" : "20",
+                      "width" : "100",
+                      "height" : "20"
+                    },
+                    "data" : "BATTERY",
+                    "fontName" : "HelveticaNeue-Light",
+                    "borderWidth" : "0",
+                    "type" : "UILabel",
+                    "textColor" : "rgba(120,120,130,1.0)",
+                    "backgroundColor" : "rgba(255,255,255,0)"
+                  },
+                  "BatteryIndicatorLine" : {
+                    "frame" : {
+                      "y" : "110",
+                      "x" : "20",
+                      "width" : "math([batterypercent]*1.6)",
+                      "height" : "2"
+                    },
+                    "backgroundColor" : "rgba(100,255,150,1.0)",
+                    "type" : "UIView",
+                    "borderWidth" : "0",
+                    "cornerRadius" : "1"
+                  }
+                },
+                "frame" : {
+                  "y" : "0",
+                  "x" : "600",
+                  "width" : "200",
+                  "height" : "160"
+                },
+                "backgroundColor" : "rgba(255,255,255,0)",
+                "type" : "UIView",
+                "borderWidth" : "0",
+                "cornerRadius" : "0"
+              }
+            },
+            "cornerRadius" : "0",
+            "pagination" : "YES",
+            "type" : "ScrollView",
+            "backgroundColor" : "rgba(255,255,255,0)",
+            "contentSize" : {
+              "width" : "math(280*4)",
+              "height" : "160"
+            }
+          }
+        },
+        "frame" : {
+          "y" : "0",
+          "x" : "0",
+          "width" : "screen_width",
+          "height" : "screen_height"
+        },
+        "backgroundColor" : "rgba(255,255,255,0)",
+        "type" : "UIView",
+        "borderWidth" : "0",
+        "cornerRadius" : "0"
+      },
+      "dock" : {
+        "frame" : {
+          "y" : "FB~150",
+          "x" : "0",
+          "width" : "screen_width",
+          "height" : "100"
+        },
+        "children" : {
+          "DockScrollView" : {
+            "frame" : {
+              "y" : "0",
+              "x" : "0",
+              "width" : "screen_width",
+              "height" : "100"
+            },
+            "children" : {
+              "Page1" : {
+                "frame" : {
+                  "y" : "0",
+                  "x" : "0",
+                  "width" : "screen_width",
+                  "height" : "100"
+                },
+                "children" : {
+                  "CenterDot1" : {
+                    "frame" : {
+                      "y" : "10",
+                      "x" : "math(view_width\/2-2)",
+                      "width" : "4",
+                      "height" : "4"
+                    },
+                    "backgroundColor" : "rgba(100,150,255,1.0)",
+                    "type" : "UIView",
+                    "borderWidth" : "0",
+                    "cornerRadius" : "2"
+                  },
+                  "StyleContainer" : {
+                    "alpha" : "0",
+                    "frame" : {
+                      "y" : "80",
+                      "x" : "math(view_width\/2-25)",
+                      "width" : "50",
+                      "height" : "50"
+                    },
+                    "children" : {
+                      "AppStyleMaster" : {
+                        "badgeImageY" : "0",
+                        "scale" : "0.8",
+                        "badgeImageScale" : "1",
+                        "badgeImage" : "none",
+                        "frame" : {
+                          "y" : "0",
+                          "x" : "0",
+                          "width" : "50",
+                          "height" : "50"
+                        },
+                        "backgroundColor" : "rgba(255,255,255,0)",
+                        "badgeBGColor" : "rgba(0, 0, 0, 1.00)",
+                        "type" : "AppIcon",
+                        "bundleID" : "none",
+                        "alpha" : "1",
+                        "badgeTextColor" : "rgba(255,255,255,1)",
+                        "styleOverride" : "none",
+                        "labelColor" : "rgba(255,255,255,0)",
+                        "badgeImageX" : "0"
+                      }
+                    },
+                    "borderWidth" : "0",
+                    "cornerRadius" : "0",
+                    "childorder" : "AppStyleMaster",
+                    "type" : "UIView",
+                    "backgroundColor" : "rgba(255,255,255,0)"
+                  },
+                  "BottomLine1" : {
+                    "frame" : {
+                      "y" : "14",
+                      "x" : "math(view_width\/2)",
+                      "width" : "1",
+                      "height" : "86"
+                    },
+                    "backgroundColor" : "rgba(80,80,90,1.0)",
+                    "type" : "UIView",
+                    "borderWidth" : "0",
+                    "cornerRadius" : "0"
+                  },
+                  "IconContainer1" : {
+                    "children" : {
+                      "App4" : {
+                        "badgeImageY" : "0",
+                        "scale" : "1",
+                        "badgeImageScale" : "1",
+                        "badgeImage" : "none",
+                        "frame" : {
+                          "y" : "5",
+                          "x" : "190",
+                          "width" : "50",
+                          "height" : "50"
+                        },
+                        "backgroundColor" : "rgba(255,255,255,0)",
+                        "badgeBGColor" : "rgba(255,0,0,1)",
+                        "type" : "AppIcon",
+                        "bundleID" : "com.apple.mobilesafari",
+                        "alpha" : "1",
+                        "badgeTextColor" : "rgba(255,255,255,1)",
+                        "styleOverride" : "AppStyleMaster",
+                        "badgeImageX" : "0",
+                        "labelColor" : "rgba(255,255,255,0)"
+                      },
+                      "App2" : {
+                        "badgeImageY" : "0",
+                        "scale" : "1",
+                        "badgeImageScale" : "1",
+                        "badgeImage" : "none",
+                        "frame" : {
+                          "y" : "5",
+                          "x" : "70",
+                          "width" : "50",
+                          "height" : "50"
+                        },
+                        "backgroundColor" : "rgba(255,255,255,0)",
+                        "badgeBGColor" : "rgba(255,0,0,1)",
+                        "type" : "AppIcon",
+                        "bundleID" : "com.apple.MobileSMS",
+                        "alpha" : "1",
+                        "badgeTextColor" : "rgba(255,255,255,1)",
+                        "styleOverride" : "AppStyleMaster",
+                        "badgeImageX" : "0",
+                        "labelColor" : "rgba(255,255,255,0)"
+                      },
+                      "App3" : {
+                        "badgeImageY" : "0",
+                        "scale" : "1",
+                        "badgeImageScale" : "1",
+                        "badgeImage" : "none",
+                        "frame" : {
+                          "y" : "5",
+                          "x" : "130",
+                          "width" : "50",
+                          "height" : "50"
+                        },
+                        "backgroundColor" : "rgba(255,255,255,0)",
+                        "badgeBGColor" : "rgba(255,0,0,1)",
+                        "type" : "AppIcon",
+                        "bundleID" : "com.apple.mobilemail",
+                        "alpha" : "1",
+                        "badgeTextColor" : "rgba(255,255,255,1)",
+                        "styleOverride" : "AppStyleMaster",
+                        "badgeImageX" : "0",
+                        "labelColor" : "rgba(255,255,255,0)"
+                      },
+                      "App1" : {
+                        "badgeImageY" : "0",
+                        "scale" : "1",
+                        "badgeImageScale" : "1",
+                        "badgeImage" : "none",
+                        "frame" : {
+                          "y" : "5",
+                          "x" : "10",
+                          "width" : "50",
+                          "height" : "50"
+                        },
+                        "backgroundColor" : "rgba(255,255,255,0)",
+                        "badgeBGColor" : "rgba(255,0,0,1)",
+                        "type" : "AppIcon",
+                        "bundleID" : "com.apple.mobilephone",
+                        "alpha" : "1",
+                        "badgeTextColor" : "rgba(255,255,255,1)",
+                        "styleOverride" : "AppStyleMaster",
+                        "badgeImageX" : "0",
+                        "labelColor" : "rgba(255,255,255,0)"
+                      }
+                    },
+                    "frame" : {
+                      "y" : "25",
+                      "x" : "math(view_width\/2-120)",
+                      "width" : "240",
+                      "height" : "60"
+                    },
+                    "borderWidth" : "0",
+                    "childorder" : "App4,App2,App3,App1",
+                    "cornerRadius" : "0",
+                    "type" : "UIView",
+                    "backgroundColor" : "rgba(255,255,255,0)"
+                  },
+                  "TopLine1" : {
+                    "frame" : {
+                      "y" : "0",
+                      "x" : "math(view_width\/2)",
+                      "width" : "1",
+                      "height" : "20"
+                    },
+                    "backgroundColor" : "rgba(80,80,90,1.0)",
+                    "type" : "UIView",
+                    "borderWidth" : "0",
+                    "cornerRadius" : "0"
+                  }
+                },
+                "borderWidth" : "0",
+                "cornerRadius" : "0",
+                "childorder" : "IconContainer1,StyleContainer,BottomLine1,TopLine1,CenterDot1",
+                "type" : "UIView",
+                "backgroundColor" : "rgba(255,255,255,0)"
+              },
+              "Page2" : {
+                "children" : {
+                  "BottomLine2" : {
+                    "frame" : {
+                      "y" : "14",
+                      "x" : "math(view_width\/2)",
+                      "width" : "1",
+                      "height" : "86"
+                    },
+                    "backgroundColor" : "rgba(80,80,90,1.0)",
+                    "type" : "UIView",
+                    "borderWidth" : "0",
+                    "cornerRadius" : "0"
+                  },
+                  "CenterDot2" : {
+                    "frame" : {
+                      "y" : "10",
+                      "x" : "math(view_width\/2-2)",
+                      "width" : "4",
+                      "height" : "4"
+                    },
+                    "backgroundColor" : "rgba(255,100,100,1.0)",
+                    "type" : "UIView",
+                    "borderWidth" : "0",
+                    "cornerRadius" : "2"
+                  },
+                  "IconContainer2" : {
+                    "children" : {
+                      "App7" : {
+                        "badgeImageY" : "0",
+                        "scale" : "1",
+                        "badgeImageScale" : "1",
+                        "badgeImage" : "none",
+                        "frame" : {
+                          "y" : "5",
+                          "x" : "130",
+                          "width" : "50",
+                          "height" : "50"
+                        },
+                        "backgroundColor" : "rgba(255,255,255,0)",
+                        "badgeBGColor" : "rgba(255,0,0,1)",
+                        "type" : "AppIcon",
+                        "bundleID" : "com.apple.Music",
+                        "alpha" : "1",
+                        "badgeTextColor" : "rgba(255,255,255,1)",
+                        "styleOverride" : "AppStyleMaster",
+                        "badgeImageX" : "0",
+                        "labelColor" : "rgba(255,255,255,0)"
+                      },
+                      "App5" : {
+                        "badgeImageY" : "0",
+                        "scale" : "1",
+                        "badgeImageScale" : "1",
+                        "badgeImage" : "none",
+                        "frame" : {
+                          "y" : "5",
+                          "x" : "10",
+                          "width" : "50",
+                          "height" : "50"
+                        },
+                        "backgroundColor" : "rgba(255,255,255,0)",
+                        "badgeBGColor" : "rgba(255,0,0,1)",
+                        "type" : "AppIcon",
+                        "bundleID" : "com.apple.camera",
+                        "alpha" : "1",
+                        "badgeTextColor" : "rgba(255,255,255,1)",
+                        "styleOverride" : "AppStyleMaster",
+                        "badgeImageX" : "0",
+                        "labelColor" : "rgba(255,255,255,0)"
+                      },
+                      "App8" : {
+                        "badgeImageY" : "0",
+                        "scale" : "1",
+                        "badgeImageScale" : "1",
+                        "badgeImage" : "none",
+                        "frame" : {
+                          "y" : "5",
+                          "x" : "190",
+                          "width" : "50",
+                          "height" : "50"
+                        },
+                        "backgroundColor" : "rgba(255,255,255,0)",
+                        "badgeBGColor" : "rgba(255,0,0,1)",
+                        "type" : "AppIcon",
+                        "bundleID" : "com.apple.AppStore",
+                        "alpha" : "1",
+                        "badgeTextColor" : "rgba(255,255,255,1)",
+                        "styleOverride" : "AppStyleMaster",
+                        "badgeImageX" : "0",
+                        "labelColor" : "rgba(255,255,255,0)"
+                      },
+                      "App6" : {
+                        "badgeImageY" : "0",
+                        "scale" : "1",
+                        "badgeImageScale" : "1",
+                        "badgeImage" : "none",
+                        "frame" : {
+                          "y" : "5",
+                          "x" : "70",
+                          "width" : "50",
+                          "height" : "50"
+                        },
+                        "backgroundColor" : "rgba(255,255,255,0)",
+                        "badgeBGColor" : "rgba(255,0,0,1)",
+                        "type" : "AppIcon",
+                        "bundleID" : "com.apple.mobileslideshow",
+                        "alpha" : "1",
+                        "badgeTextColor" : "rgba(255,255,255,1)",
+                        "styleOverride" : "AppStyleMaster",
+                        "badgeImageX" : "0",
+                        "labelColor" : "rgba(255,255,255,0)"
+                      }
+                    },
+                    "frame" : {
+                      "y" : "25",
+                      "x" : "math(view_width\/2-120)",
+                      "width" : "240",
+                      "height" : "60"
+                    },
+                    "borderWidth" : "0",
+                    "childorder" : "App7,App5,App8,App6",
+                    "cornerRadius" : "0",
+                    "type" : "UIView",
+                    "backgroundColor" : "rgba(255,255,255,0)"
+                  },
+                  "TopLine2" : {
+                    "frame" : {
+                      "y" : "0",
+                      "x" : "math(view_width\/2)",
+                      "width" : "1",
+                      "height" : "20"
+                    },
+                    "backgroundColor" : "rgba(80,80,90,1.0)",
+                    "type" : "UIView",
+                    "borderWidth" : "0",
+                    "cornerRadius" : "0"
+                  }
+                },
+                "frame" : {
+                  "y" : "0",
+                  "x" : "screen_width",
+                  "width" : "screen_width",
+                  "height" : "100"
+                },
+                "borderWidth" : "0",
+                "childorder" : "BottomLine2,CenterDot2,IconContainer2,TopLine2",
+                "cornerRadius" : "0",
+                "type" : "UIView",
+                "backgroundColor" : "rgba(255,255,255,0)"
+              },
+              "Page3" : {
+                "children" : {
+                  "IconContainer3" : {
+                    "children" : {
+                      "App9" : {
+                        "badgeImageY" : "0",
+                        "scale" : "1",
+                        "badgeImageScale" : "1",
+                        "badgeImage" : "none",
+                        "frame" : {
+                          "y" : "5",
+                          "x" : "10",
+                          "width" : "50",
+                          "height" : "50"
+                        },
+                        "backgroundColor" : "rgba(255,255,255,0)",
+                        "badgeBGColor" : "rgba(255,0,0,1)",
+                        "type" : "AppIcon",
+                        "bundleID" : "com.apple.Maps",
+                        "alpha" : "1",
+                        "badgeTextColor" : "rgba(255,255,255,1)",
+                        "styleOverride" : "AppStyleMaster",
+                        "badgeImageX" : "0",
+                        "labelColor" : "rgba(255,255,255,0)"
+                      },
+                      "App11" : {
+                        "badgeImageY" : "0",
+                        "scale" : "1",
+                        "badgeImageScale" : "1",
+                        "badgeImage" : "none",
+                        "frame" : {
+                          "y" : "5",
+                          "x" : "130",
+                          "width" : "50",
+                          "height" : "50"
+                        },
+                        "backgroundColor" : "rgba(255,255,255,0)",
+                        "badgeBGColor" : "rgba(255,0,0,1)",
+                        "type" : "AppIcon",
+                        "bundleID" : "com.apple.calculator",
+                        "alpha" : "1",
+                        "badgeTextColor" : "rgba(255,255,255,1)",
+                        "styleOverride" : "AppStyleMaster",
+                        "badgeImageX" : "0",
+                        "labelColor" : "rgba(255,255,255,0)"
+                      },
+                      "App10" : {
+                        "badgeImageY" : "0",
+                        "scale" : "1",
+                        "badgeImageScale" : "1",
+                        "badgeImage" : "none",
+                        "frame" : {
+                          "y" : "5",
+                          "x" : "70",
+                          "width" : "50",
+                          "height" : "50"
+                        },
+                        "backgroundColor" : "rgba(255,255,255,0)",
+                        "badgeBGColor" : "rgba(255,0,0,1)",
+                        "type" : "AppIcon",
+                        "bundleID" : "com.apple.weather",
+                        "alpha" : "1",
+                        "badgeTextColor" : "rgba(255,255,255,1)",
+                        "styleOverride" : "AppStyleMaster",
+                        "badgeImageX" : "0",
+                        "labelColor" : "rgba(255,255,255,0)"
+                      },
+                      "App12" : {
+                        "badgeImageY" : "0",
+                        "scale" : "1",
+                        "badgeImageScale" : "1",
+                        "badgeImage" : "none",
+                        "frame" : {
+                          "y" : "5",
+                          "x" : "190",
+                          "width" : "50",
+                          "height" : "50"
+                        },
+                        "backgroundColor" : "rgba(255,255,255,0)",
+                        "badgeBGColor" : "rgba(255,0,0,1)",
+                        "type" : "AppIcon",
+                        "bundleID" : "com.apple.Preferences",
+                        "alpha" : "1",
+                        "badgeTextColor" : "rgba(255,255,255,1)",
+                        "styleOverride" : "AppStyleMaster",
+                        "badgeImageX" : "0",
+                        "labelColor" : "rgba(255,255,255,0)"
+                      }
+                    },
+                    "frame" : {
+                      "y" : "25",
+                      "x" : "math(view_width\/2-120)",
+                      "width" : "240",
+                      "height" : "60"
+                    },
+                    "borderWidth" : "0",
+                    "childorder" : "App9,App11,App10,App12",
+                    "cornerRadius" : "0",
+                    "type" : "UIView",
+                    "backgroundColor" : "rgba(255,255,255,0)"
+                  },
+                  "TopLine3" : {
+                    "frame" : {
+                      "y" : "0",
+                      "x" : "math(view_width\/2)",
+                      "width" : "1",
+                      "height" : "20"
+                    },
+                    "backgroundColor" : "rgba(80,80,90,1.0)",
+                    "type" : "UIView",
+                    "borderWidth" : "0",
+                    "cornerRadius" : "0"
+                  },
+                  "CenterDot3" : {
+                    "frame" : {
+                      "y" : "10",
+                      "x" : "math(view_width\/2-2)",
+                      "width" : "4",
+                      "height" : "4"
+                    },
+                    "backgroundColor" : "rgba(100,255,150,1.0)",
+                    "type" : "UIView",
+                    "borderWidth" : "0",
+                    "cornerRadius" : "2"
+                  },
+                  "BottomLine3" : {
+                    "frame" : {
+                      "y" : "14",
+                      "x" : "math(view_width\/2)",
+                      "width" : "1",
+                      "height" : "86"
+                    },
+                    "backgroundColor" : "rgba(80,80,90,1.0)",
+                    "type" : "UIView",
+                    "borderWidth" : "0",
+                    "cornerRadius" : "0"
+                  }
+                },
+                "frame" : {
+                  "y" : "0",
+                  "x" : "math(screen_width*2)",
+                  "width" : "screen_width",
+                  "height" : "100"
+                },
+                "borderWidth" : "0",
+                "childorder" : "IconContainer3,TopLine3,CenterDot3,BottomLine3",
+                "cornerRadius" : "0",
+                "type" : "UIView",
+                "backgroundColor" : "rgba(255,255,255,0)"
+              }
+            },
+            "cornerRadius" : "0",
+            "pagination" : "YES",
+            "type" : "ScrollView",
+            "childorder" : "Page1,Page2,Page3",
+            "backgroundColor" : "rgba(255,255,255,0)",
+            "contentSize" : {
+              "width" : "math(screen_width*3)",
+              "height" : "100"
+            }
+          }
+        },
+        "borderWidth" : "0",
+        "childorder" : "DockScrollView",
+        "cornerRadius" : "0",
+        "type" : "UIView",
+        "backgroundColor" : "rgba(81, 135, 60, 0.00)"
+      }
+    }
+  }
+}

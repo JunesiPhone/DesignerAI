@@ -1,0 +1,331 @@
+# iOS Widget Theme System for AI Training
+
+## Overview
+This JSON-based system creates custom iOS widget themes using nested UIView containers, supporting dynamic data, animations, responsive layouts, and styling for time, date, weather, battery, music, notifications, and app icons.
+
+## Core Components
+- UIView: Container for elements, supports blur, shadows, and interaction.
+- UILabel: Displays text with dynamic data (e.g., [paddedhour]:[minute]).
+- UIImageView: Shows static images or dynamic album art.
+- BatteryBar: Animated battery level indicator.
+- BatteryIcon: Battery icon with percentage fill.
+- WeatherIcon: Displays weather conditions or forecasts (e.g., "clima" or "htc" icon sets).
+- AppIcon: App icons with badges (e.g., bundleID: "com.apple.mobilesafari").
+
+## Dynamic Data Fields
+### Time
+- [textTime]: Time in words (e.g., "three thirty").
+- [textHour]: Hour in words (e.g., "three").
+- [textMinute]: Minute in words (e.g., "thirty").
+- [hour]: Hour (12/24 format per settings).
+- [ampm]: "am" or "pm".
+- [paddedhour]: Hour with leading zero (e.g., "03").
+- [paddedhourpartone], [paddedhourparttwo]: First/second digit of padded hour.
+- [minute]: Minute (e.g., "30").
+- [minutepartone], [minuteparttwo]: First/second digit of minute.
+- [seconds]: Seconds (e.g., "45").
+- [time]: Time in h:mm format (e.g., "9:30").
+- [paddedtime]: Time in hh:mm format (e.g., "09:30").
+- [timeofday]: Contextual period (e.g., "Morning").
+
+### Date & Calendar
+- [month]: Full month name (e.g., "January").
+- [firstlettermonth]: First letter of month (e.g., "J").
+- [shortmonth]: Abbreviated month (e.g., "Jan").
+- [monthnumber]: Month as number (1-12).
+- [paddedmonthnumber]: Month with leading zero (01-12).
+- [date]: Day of month (1-31).
+- [paddeddate]: Day with leading zero (01-31).
+- [paddeddatepartone], [paddeddateparttwo]: First/second digit of padded date.
+- [textDate]: Date in words (e.g., "first").
+- [dateordinal]: Date with ordinal suffix (e.g., "21st").
+- [year]: Full year (e.g., "2025").
+- [shortyear]: Two-digit year (e.g., "25").
+- [day]: Full day name (e.g., "Monday").
+- [firstletterday]: First letter of day (e.g., "M").
+- [shortday]: Abbreviated day (e.g., "Mon").
+- [shortdayminusone] to [shortdayminusfour]: Short day names for 1-4 days ago.
+- [paddeddateminusone] to [paddeddateminusseven]: Padded dates for 1-7 days ago.
+- [dateminusone] to [dateminusseven]: Dates for 1-7 days ago.
+- [shortdayplusone] to [shortdayplusfour]: Short day names for 1-4 days ahead.
+- [paddeddateplusone] to [paddeddateplusseven]: Padded dates for 1-7 days ahead.
+- [dateplusone] to [dateplusseven]: Dates for 1-7 days ahead.
+- [calEvent1] to [calEvent3]: Next 3 event titles.
+- [calEvent1WDay] to [calEvent3WDay]: Events with day prefix.
+- [calEvent1WDate] to [calEvent3WDate]: Events with date prefix.
+- [calEvent1FullDay] to [calEvent3FullDay]: Event full day names.
+- [calEvent1Date] to [calEvent3Date]: Event dates.
+- [calEvent1Time] to [calEvent3Time]: Event time ranges.
+- [calEvent1Location] to [calEvent3Location]: Event locations.
+- [alarm], [paddedalarm]: Next alarm time.
+
+### Weather
+- [temperature]: Current temperature (e.g., "72").
+- [feelslike]: "Feels like" temperature.
+- [condition]: Weather condition (e.g., "cloudy").
+- [conditionCode]: Numeric weather code.
+- [temptype]: Unit (e.g., "F").
+- [humidity]: Humidity percentage.
+- [uvindex]: UV index.
+- [windspeed]: Wind speed.
+- [winddirection]: Wind direction (e.g., "NNW").
+- [windunit]: Wind speed unit (e.g., "MPH").
+- [precip]: Precipitation chance percentage.
+- [sunrise], [sunset]: Sunrise/sunset times.
+- [high], [low]: Daily high/low temperatures.
+- [city]: Current city name.
+- [lastupdate]: Weather update timestamp.
+- [hour1time] to [hour6time]: Hourly forecast times.
+- [hour1temp] to [hour6temp]: Hourly temperatures.
+- [hour1precip] to [hour6precip]: Hourly precipitation chances.
+- [day1day] to [day5day]: Full day names for 5-day forecast.
+- [day1shortday] to [day5shortday]: Abbreviated forecast days.
+- [day1low] to [day5low]: Forecast low temperatures.
+- [day1high] to [day5high]: Forecast high temperatures.
+- [day1condition] to [day5condition]: Forecast conditions.
+- [day1icon] to [day5icon]: Forecast icon codes.
+- [day1precip] to [day5precip]: Forecast precipitation chances.
+
+### Battery & System
+- [batterypercent]: Battery percentage (e.g., "75").
+- [batteryAsInt]: Battery as integer.
+- [ischarging], [charging]: Charging status (e.g., "YES").
+- [devicename]: Device name.
+- [devicefirmware]: Firmware version.
+- [ipaddress]: IP address.
+- [wifipercent]: WiFi signal strength percentage.
+- [wifiname]: WiFi network name.
+- [signalpercent]: Cellular signal strength percentage.
+- [bluetoothConnected]: Bluetooth status.
+- [btbattery]: Bluetooth device battery with name.
+- [btbatterynoname]: Bluetooth battery without name.
+- [btbatterynonamedisconnected]: Bluetooth battery with disconnect fallback.
+
+### Music
+- [musicTitle]: Song title (e.g., "Song Name").
+- [musicArtist]: Artist name.
+- [musicAlbum]: Album name.
+- [musicElapsed]: Elapsed playback time (e.g., "1:30").
+- [musicDurationLeft]: Remaining playback time.
+- [musicDuration]: Total track duration.
+- [musicNowPlayingApp]: Music app name.
+
+### Notifications
+- [phoneBadge], [mailBadge], [messageBadge]: Badge counts for phone, mail, messages.
+
+### Other
+- [moonBrightness]: Moon brightness percentage.
+- [moonPhaseString]: Moon phase (e.g., "Full Moon").
+- [percentLeftInYear], [percentYearProgress]: Year progress percentages.
+- [percentLeftInMonth], [percentMonthProgress]: Month progress percentages.
+- [steps]: Step count.
+- [degreeSymbol]: °.
+- [circleSymbol], [upSymbol], [downSymbol], [heartSymbol], [heartOutlineSymbol]: Common symbols.
+
+## Layout and Positioning
+- Frame: Sets position (x, y) and size (width, height).
+  - Values: FR~n (from right, e.g., FR~20), FB~n (from bottom, e.g., FB~50), center, math(view_width-20).
+  - Limitations: Use simple math expressions (e.g., math(view_width-40)); avoid nested calculations (e.g., math((view_width-140)/3)).
+- FollowWidthItem: Secondary view tracks primary view’s width edge in same container.
+  - Usage: Set "followWidthItem": "primaryViewID", adjust with "followWidthOffset": "x,y".
+  - Example: Label follows BatteryBar to show [batterypercent].
+- ChildOrder: Controls z-index (e.g., "childorder": "view1,view2").
+- CutWithView: Controls clipping (e.g., "cutWithView": "none").
+- MaskURL: Applies image masks (e.g., "maskURL": "none").
+- GradientImage: Applies gradient overlays (e.g., "gradientImage": "glare.png").
+
+## Animations
+- Syntax:
+  {
+    "actions": "animation",
+    "animation": {
+      "view1": "{ x:100, y:0, width:150, alpha:0.8, speed:0.3, toggle:yes, wait:0.2, trigger:view2 }"
+    }
+  }
+- Properties:
+  - x, y: Position change.
+  - width, height: Size change.
+  - alpha: Transparency.
+  - speed: Duration (e.g., 0.3 seconds).
+  - toggle: yes (reverses on tap) or no (one-way).
+  - wait: Delay (e.g., 0.2 seconds).
+  - trigger: Triggers another view’s animation (e.g., "trigger:view2").
+  - transition: Easing type (e.g., "easein").
+- Triggers:
+  - triggerOnUnlock: Animates SpringBoard on unlock (Animation 1) and lock (Animation 2 for reset).
+  - triggerOnWake: Animates Lock Screen on wake, dim, or unlock.
+  - showWhenPlaying: Animates based on music playback with "triggerOn:view1" (e.g., move to center) and "triggerOff:view2" (e.g., move to x:0).
+  - showWhenCharging: Shows element when charging (e.g., "showWhenCharging": "YES").
+- Animation Notes:
+  - Chained animations use "trigger" to fire subsequent animations.
+  - Use "wait" for staggered effects.
+  - Handle interruptions by resetting animations explicitly.
+  - Toggle: no requires separate animations for repeated actions.
+
+## Visual Styling
+- Blur (Glassmorphism):
+  - Properties: "blurAlpha": "1", "blurColor": "light" or "dark", "blurIntensity": "10".
+  - Usage: Apply to main container, set child "blurAlpha": "0" for clean corners.
+  - Note: Use "boxShadow": { "color": "rgba(0,0,0,0.00)" } with blur.
+- Clipping and Shadows:
+  - Elements outside parent UIView bounds are hidden unless "boxShadow": { "color": "rgba(255,255,255,0)" }.
+  - Use "boxShadow": { "x": "0", "y": "3", "radius": "10" } for depth.
+- Fonts:
+  - Arabic: AlNile, AlNile-Bold.
+  - Korean: AppleSDGothicNeo-Regular, Thin, UltraLight, Light, Medium, SemiBold, Bold.
+  - Chinese: PingFangHK/SC/TC (Regular, Ultralight, Thin, Light, Medium, Semibold).
+  - Core: Helvetica, HelveticaNeue (UltraLight, Thin, Light, Medium, Bold), Arial, ArialRoundedMTBold.
+  - Geometric: Avenir, AvenirNext (Regular, UltraLight, Medium, DemiBold, Bold), Futura.
+  - Serif: GillSans (Regular, Light, SemiBold, Bold), Verdana.
+  - Monospace: Courier, CourierNew, Menlo.
+  - Display: MarkerFelt (Thin, Wide), Papyrus.
+  - Usage: Large displays (HelveticaNeue-UltraLight), bold accents (Futura-Bold), friendly (ArialRoundedMTBold), technical (Menlo-Bold).
+- Colors: RGBA (e.g., "backgroundColor": "rgba(255,255,255,0.3)").
+- Shadows:
+  - BoxShadow: { "x": "0", "y": "3", "radius": "10", "color": "rgba(0,0,0,0.5)" }.
+  - TextShadow: { "x": "0", "y": "2", "radius": "5", "color": "rgba(0,0,0,1.0)" }.
+- Text Styling:
+  - fontSize: Size in points (e.g., "24").
+  - textAlignment: NSTextAlignmentLeft, Center, Right.
+  - numberOfLines: Line limit (0 = unlimited).
+  - textStyle: uppercase, lowercase, capitalize.
+  - kerning: Letter spacing (e.g., "0").
+  - Dynamic formatting: Use "dataAttr": " [field]", "fontSizeAttr", "fontColorAttr", "fontNameAttr" for appended data styling.
+
+## Interactive Elements
+- Actions: Trigger behaviors on tap.
+  - Examples: "playMusic", "nextTrack", "prevTrack", "openDrawer", "openSpotlight", "animation".
+- UserInteraction: Enables touch (e.g., "userInteraction": "YES").
+
+## Image and Media
+- UIImageView:
+  - isAlbumArt: Loads music album art (e.g., "isAlbumArt": "yes").
+  - pauseImage: Alternative image (e.g., "pauseImage": "pause.png").
+  - contentMode: Image scaling (e.g., "scaleAspectFit").
+  - imageColor: Tint color (e.g., "imageColor": "none").
+- SF Symbols:
+  - SFSymbolName: iOS symbol (e.g., "airpodspro").
+  - SFColor: Symbol color (e.g., "rgba(255,255,255,1)").
+  - SFWeight: Symbol weight (e.g., "none").
+
+## App Icons
+- Properties:
+  - bundleID: App identifier (e.g., "com.apple.mobilesafari", "com.apple.Music").
+  - scale: Size scaling (e.g., "0.8").
+  - labelColor: App name color (e.g., "rgba(255,255,255,1)").
+  - badgeBGColor, badgeTextColor: Badge styling.
+  - badgeImageX, badgeImageY, badgeImageScale: Badge positioning/scaling.
+
+## Weather and App Icon Configurations
+- WeatherIcon: Set "iconSet": "clima" or "htc", "forecast": "none" (current), "day1" to "day5", "hour1" to "hour6".
+- AppIcon: Use "bundleID" (e.g., com.apple.mobilesafari, com.apple.Music, com.apple.Preferences).
+
+## Theme Patterns
+- Simple Time Display: Time label, date, weather, battery bar.
+- Multi-Panel: Navigation bar, home panel (app icons), weather panel, music panel.
+- HTC-Style: Flip clock, weather bar, 5-day forecast strip, app drawer.
+
+## Performance Optimization
+- Minimize nested views to reduce rendering load.
+- Set "userInteractionEnabled": "NO" for non-interactive elements.
+- Use "blurAlpha": "0" on non-essential elements to save resources.
+- Test themes with FR, FB, and math() for multiple screen sizes.
+
+## Theme Structure Example
+{
+  "PresetView": {
+    "type": "UIView",
+    "frame": { "x": "0", "y": "0", "width": "screen_width", "height": "screen_height" },
+    "blurAlpha": "1",
+    "backgroundColor": "rgba(255,255,255,0.3)",
+    "cornerRadius": "20",
+    "boxShadow": { "color": "rgba(0,0,0,0.00)" },
+    "children": {
+      "TimeLabel": {
+        "type": "UILabel",
+        "data": "[paddedhour]:[minute] [ampm]",
+        "dataAttr": " [timeofday]",
+        "frame": { "x": "center", "y": "100", "width": "200", "height": "40" },
+        "fontName": "HelveticaNeue-Bold",
+        "fontSize": "32",
+        "textAlignment": "NSTextAlignmentCenter",
+        "numberOfLines": "1",
+        "triggerOnUnlock": "TimeMove",
+        "animation": { "TimeMove": "{ x:50, speed:0.3, toggle:yes, trigger:WeatherShow }" }
+      },
+      "WeatherLabel": {
+        "type": "UILabel",
+        "data": "[temperature][degreeSymbol] [condition]",
+        "frame": { "x": "center", "y": "150", "width": "200", "height": "30" },
+        "fontName": "AvenirNext-Medium",
+        "fontSize": "20",
+        "triggerOnWake": "WeatherShow",
+        "animation": { "WeatherShow": "{ alpha:1, speed:0.3, wait:0.2, toggle:yes }" }
+      },
+      "WeatherIcon": {
+        "type": "WeatherIcon",
+        "iconSet": "clima",
+        "forecast": "day1",
+        "frame": { "x": "center", "y": "190", "width": "50", "height": "50" }
+      },
+      "BatteryContainer": {
+        "type": "UIView",
+        "frame": { "x": "20", "y": "FB~50", "width": "150", "height": "20" },
+        "children": {
+          "BatteryBar": {
+            "type": "BatteryBar",
+            "frame": { "x": "0", "y": "0", "width": "100", "height": "10" },
+            "innerColor": "rgba(92,92,92,1.0)",
+            "lowColor": "rgba(255,0,0,1.0)",
+            "showWhenCharging": "YES"
+          },
+          "BatteryLabel": {
+            "type": "UILabel",
+            "data": "[batterypercent]%",
+            "followWidthItem": "BatteryBar",
+            "followWidthOffset": "10,0",
+            "frame": { "x": "0", "y": "0", "width": "50", "height": "20" },
+            "fontName": "HelveticaNeue-Light",
+            "fontSize": "16"
+          }
+        }
+      },
+      "MusicPlayer": {
+        "type": "UIView",
+        "frame": { "x": "0", "y": "center", "width": "200", "height": "50" },
+        "showWhenPlaying": "triggerOn:MusicOn,triggerOff:MusicOff",
+        "animation": {
+          "MusicOn": "{ x:100, speed:0.3, toggle:yes }",
+          "MusicOff": "{ x:0, speed:0.3, toggle:yes }"
+        },
+        "actions": "playMusic",
+        "children": {
+          "MusicLabel": {
+            "type": "UILabel",
+            "data": "[musicTitle] - [musicArtist]",
+            "frame": { "x": "0", "y": "0", "width": "200", "height": "50" },
+            "fontName": "AvenirNext-Medium",
+            "fontSize": "18",
+            "numberOfLines": "1"
+          }
+        }
+      },
+      "AppIcon": {
+        "type": "AppIcon",
+        "bundleID": "com.apple.Music",
+        "frame": { "x": "FR~20", "y": "FB~20", "width": "60", "height": "60" },
+        "badgeBGColor": "rgba(255,0,0,1)",
+        "badgeTextColor": "rgba(255,255,255,1)"
+      }
+    }
+  }
+}
+
+## Notes for AI Training
+- Dynamic Data: Use fields (e.g., [paddedhour], [batterypercent]) in UILabel for real-time updates. Handle long text with "numberOfLines": "1" and "dataAttr" for appended data.
+- Animations: Support chaining via "trigger" and delays via "wait". Ensure reset animations for triggers like triggerOnUnlock. Handle interruptions with explicit resets.
+- Layout: Use FR, FB, center, and simple math() (e.g., math(view_width-20)). Avoid complex math expressions.
+- Styling: Apply blur to main containers only. Use fonts like HelveticaNeue for modern, Futura for bold designs.
+- Interactions: Enable actions like "playMusic" or "animation" for interactivity.
+- Performance: Minimize nested views, use "blurAlpha": "0" and "userInteractionEnabled": "NO" for efficiency.
+- Conditional Display: Combine conditions (e.g., "showWhenPlaying", "showWhenCharging") with explicit priority to avoid conflicts.

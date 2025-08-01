@@ -1,0 +1,308 @@
+{
+  "PresetView" : {
+    "type" : "UIView",
+    "frame" : {
+      "y" : "0",
+      "height" : "screen_height",
+      "userInteractionEnabled" : "NO",
+      "x" : "0",
+      "width" : "screen_width"
+    },
+    "children" : {
+      "forecast" : {
+        "childorder" : "day3precip,day4precip,day5day,day5precip,day1precip,day4day,day1lowhi,weather_icon5,day2lowhi,day3lowhi,day3day,weather_icon4,day4lowhi,day5lowhi,weather_icon3,day2day,weather_icon2,day1day,weather_icon1,day2precip",
+        "frame" : {
+          "y" : "100",
+          "x" : "center",
+          "width" : "298",
+          "height" : "100"
+        },
+        "backgroundColor" : "rgba(0,0,0,0.6)",
+        "type" : "UIView",
+        "cornerRadius" : 10,
+        "children" : {
+          "day4precip" : {
+            "fontSize" : "FH",
+            "textAlignment" : "NSTextAlignmentCenter",
+            "numberOfLines" : "1",
+            "data" : "[day4precip]%",
+            "frame" : {
+              "y" : "85",
+              "x" : "180",
+              "width" : "60",
+              "height" : "8"
+            },
+            "fontName" : "PingFangTC-Regular",
+            "type" : "UILabel",
+            "textColor" : "rgba(170,203,255,1.0)"
+          },
+          "day5day" : {
+            "fontSize" : "FH",
+            "textAlignment" : "NSTextAlignmentCenter",
+            "numberOfLines" : "1",
+            "data" : "[day5shortday]",
+            "frame" : {
+              "y" : "15",
+              "x" : "240",
+              "width" : "60",
+              "height" : "10"
+            },
+            "fontName" : "PingFangTC-Regular",
+            "type" : "UILabel",
+            "textColor" : "rgba(255,255,255,1.0)"
+          },
+          "day5precip" : {
+            "fontSize" : "FH",
+            "textAlignment" : "NSTextAlignmentCenter",
+            "numberOfLines" : "1",
+            "data" : "[day5precip]%",
+            "frame" : {
+              "y" : "85",
+              "x" : "240",
+              "width" : "60",
+              "height" : "8"
+            },
+            "fontName" : "PingFangTC-Regular",
+            "type" : "UILabel",
+            "textColor" : "rgba(170,203,255,1.0)"
+          },
+          "day1precip" : {
+            "fontSize" : "FH",
+            "textAlignment" : "NSTextAlignmentCenter",
+            "numberOfLines" : "1",
+            "data" : "[day1precip]%",
+            "frame" : {
+              "y" : "85",
+              "x" : "0",
+              "width" : "60",
+              "height" : "8"
+            },
+            "fontName" : "PingFangTC-Regular",
+            "type" : "UILabel",
+            "textColor" : "rgba(170,203,255,1.0)"
+          },
+          "day2precip" : {
+            "fontSize" : "FH",
+            "textAlignment" : "NSTextAlignmentCenter",
+            "numberOfLines" : "1",
+            "data" : "[day2precip]%",
+            "frame" : {
+              "y" : "85",
+              "x" : "60",
+              "width" : "60",
+              "height" : "8"
+            },
+            "fontName" : "PingFangTC-Regular",
+            "type" : "UILabel",
+            "textColor" : "rgba(170,203,255,1.0)"
+          },
+          "day4day" : {
+            "fontSize" : "FH",
+            "textAlignment" : "NSTextAlignmentCenter",
+            "numberOfLines" : "1",
+            "data" : "[day4shortday]",
+            "frame" : {
+              "y" : "15",
+              "x" : "180",
+              "width" : "60",
+              "height" : "10"
+            },
+            "fontName" : "PingFangTC-Regular",
+            "type" : "UILabel",
+            "textColor" : "rgba(255,255,255,1.0)"
+          },
+          "day1lowhi" : {
+            "fontSize" : "FH",
+            "textAlignment" : "NSTextAlignmentCenter",
+            "numberOfLines" : "1",
+            "data" : "[day1high]°\/[day1low]°",
+            "frame" : {
+              "y" : "70",
+              "x" : "0",
+              "width" : "60",
+              "height" : "10"
+            },
+            "fontName" : "PingFangTC-Regular",
+            "type" : "UILabel",
+            "textColor" : "rgba(255,255,255,1.0)"
+          },
+          "weather_icon5" : {
+            "frame" : {
+              "y" : "25",
+              "x" : "245",
+              "width" : "50",
+              "height" : "50"
+            },
+            "forecast" : "day5",
+            "type" : "WeatherIcon",
+            "iconSet" : "clima"
+          },
+          "day2lowhi" : {
+            "fontSize" : "FH",
+            "textAlignment" : "NSTextAlignmentCenter",
+            "numberOfLines" : "1",
+            "data" : "[day2high]°\/[day2low]°",
+            "frame" : {
+              "y" : "70",
+              "x" : "60",
+              "width" : "60",
+              "height" : "10"
+            },
+            "fontName" : "PingFangTC-Regular",
+            "type" : "UILabel",
+            "textColor" : "rgba(255,255,255,1.0)"
+          },
+          "day3lowhi" : {
+            "fontSize" : "FH",
+            "textAlignment" : "NSTextAlignmentCenter",
+            "numberOfLines" : "1",
+            "data" : "[day3high]°\/[day3low]°",
+            "frame" : {
+              "y" : "70",
+              "x" : "120",
+              "width" : "60",
+              "height" : "10"
+            },
+            "fontName" : "PingFangTC-Regular",
+            "type" : "UILabel",
+            "textColor" : "rgba(255,255,255,1.0)"
+          },
+          "day3day" : {
+            "fontSize" : "FH",
+            "textAlignment" : "NSTextAlignmentCenter",
+            "numberOfLines" : "1",
+            "data" : "[day3shortday]",
+            "frame" : {
+              "y" : "15",
+              "x" : "120",
+              "width" : "60",
+              "height" : "10"
+            },
+            "fontName" : "PingFangTC-Regular",
+            "type" : "UILabel",
+            "textColor" : "rgba(255,255,255,1.0)"
+          },
+          "weather_icon4" : {
+            "frame" : {
+              "y" : "25",
+              "x" : "185",
+              "width" : "50",
+              "height" : "50"
+            },
+            "forecast" : "day4",
+            "type" : "WeatherIcon",
+            "iconSet" : "clima"
+          },
+          "day4lowhi" : {
+            "fontSize" : "FH",
+            "textAlignment" : "NSTextAlignmentCenter",
+            "numberOfLines" : "1",
+            "data" : "[day4high]°\/[day4low]°",
+            "frame" : {
+              "y" : "70",
+              "x" : "180",
+              "width" : "60",
+              "height" : "10"
+            },
+            "fontName" : "PingFangTC-Regular",
+            "type" : "UILabel",
+            "textColor" : "rgba(255,255,255,1.0)"
+          },
+          "day5lowhi" : {
+            "fontSize" : "FH",
+            "textAlignment" : "NSTextAlignmentCenter",
+            "numberOfLines" : "1",
+            "data" : "[day5high]°\/[day5low]°",
+            "frame" : {
+              "y" : "70",
+              "x" : "240",
+              "width" : "60",
+              "height" : "10"
+            },
+            "fontName" : "PingFangTC-Regular",
+            "type" : "UILabel",
+            "textColor" : "rgba(255,255,255,1.0)"
+          },
+          "weather_icon3" : {
+            "frame" : {
+              "y" : "25",
+              "x" : "125",
+              "width" : "50",
+              "height" : "50"
+            },
+            "forecast" : "day3",
+            "type" : "WeatherIcon",
+            "iconSet" : "clima"
+          },
+          "day2day" : {
+            "fontSize" : "FH",
+            "textAlignment" : "NSTextAlignmentCenter",
+            "numberOfLines" : "1",
+            "data" : "[day2shortday]",
+            "frame" : {
+              "y" : "15",
+              "x" : "60",
+              "width" : "60",
+              "height" : "10"
+            },
+            "fontName" : "PingFangTC-Regular",
+            "type" : "UILabel",
+            "textColor" : "rgba(255,255,255,1.0)"
+          },
+          "weather_icon2" : {
+            "frame" : {
+              "y" : "25",
+              "x" : "65",
+              "width" : "50",
+              "height" : "50"
+            },
+            "forecast" : "day2",
+            "type" : "WeatherIcon",
+            "iconSet" : "clima"
+          },
+          "day1day" : {
+            "fontSize" : "FH",
+            "textAlignment" : "NSTextAlignmentCenter",
+            "numberOfLines" : "1",
+            "data" : "[day1shortday]",
+            "frame" : {
+              "y" : "15",
+              "x" : "0",
+              "width" : "60",
+              "height" : "10"
+            },
+            "fontName" : "PingFangTC-Regular",
+            "type" : "UILabel",
+            "textColor" : "rgba(255,255,255,1.0)"
+          },
+          "weather_icon1" : {
+            "frame" : {
+              "y" : "25",
+              "x" : "5",
+              "width" : "50",
+              "height" : "55"
+            },
+            "forecast" : "day1",
+            "type" : "WeatherIcon",
+            "iconSet" : "clima"
+          },
+          "day3precip" : {
+            "fontSize" : "FH",
+            "textAlignment" : "NSTextAlignmentCenter",
+            "numberOfLines" : "1",
+            "data" : "[day3precip]%",
+            "frame" : {
+              "y" : "85",
+              "x" : "120",
+              "width" : "60",
+              "height" : "8"
+            },
+            "fontName" : "PingFangTC-Regular",
+            "type" : "UILabel",
+            "textColor" : "rgba(170,203,255,1.0)"
+          }
+        }
+      }
+    }
+  }
+}

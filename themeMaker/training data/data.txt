@@ -1,0 +1,181 @@
+
+### Current Time
+- `textTime` - Current time written out in words (e.g., "three thirty")
+- `textHour` - Current hour written out in words (e.g., "three")
+- `textMinute` - Current minute written out in words (e.g., "thirty")
+- `hour` - Current hour (12 or 24 format based on settings)
+- `ampm` - "am" or "pm" indicator
+- `paddedhour` - Hour with leading zero (e.g., "03")
+- `paddedhourpartone` - First digit of padded hour
+- `paddedhourparttwo` - Second digit of padded hour
+- `minute` - Current minute
+- `minutepartone` - First digit of minute
+- `minuteparttwo` - Second digit of minute
+- `seconds` - Current seconds
+- `time` - Time in h:mm format
+- `paddedtime` - Time in hh:mm format (24hr if enabled)
+
+## Date & Calendar Data
+
+### Current Date
+- `month` - Full month name (e.g., "January")
+- `firstlettermonth` - First letter of month (e.g., "J")
+- `shortmonth` - Abbreviated month (e.g., "Jan")
+- `monthnumber` - Month as number (1-12)
+- `paddedmonthnumber` - Month with leading zero (01-12)
+- `date` - Day of month (1-31)
+- `paddeddate` - Day with leading zero (01-31)
+- `paddeddatepartone` - First digit of padded date
+- `paddeddateparttwo` - Second digit of padded date
+- `textDate` - Date written out in words (e.g., "first", "second")
+- `dateordinal` - Date with ordinal suffix (e.g., "21st", "3rd")
+- `year` - Full year (e.g., "2023")
+- `shortyear` - Two-digit year (e.g., "23")
+
+### Day of Week
+- `day` - Full day name (e.g., "Monday")
+- `firstletterday` - First letter of day (e.g., "M")
+- `shortday` - Abbreviated day (e.g., "Mon")
+
+### Relative Dates (Past)
+- `shortdayminusone` through `shortdayminusfour` - Short day names for 1-4 days ago
+- `paddeddateminusone` through `paddeddateminusseven` - Padded dates for 1-7 days ago
+- `dateminusone` through `dateminusseven` - Dates for 1-7 days ago
+
+### Relative Dates (Future)
+- `shortdayplusone` through `shortdayplusfour` - Short day names for 1-4 days ahead
+- `paddeddateplusone` through `paddeddateplusseven` - Padded dates for 1-7 days ahead
+- `dateplusone` through `dateplusseven` - Dates for 1-7 days ahead
+
+### Time of Day
+- `timeofday` - Contextual time period ("Morning", "Afternoon", "Evening", "Night")
+
+### Progress Indicators
+- `percentLeftInYear` - Percentage of year remaining (placeholder: "50")
+- `percentYearProgress` - Percentage of year completed (placeholder: "50")
+- `percentLeftInMonth` - Percentage of month remaining (placeholder: "50")
+- `percentMonthProgress` - Percentage of month completed (placeholder: "50")
+
+## Weather Data
+
+### Current Conditions
+- `temperature` - Current temperature
+- `feelslike` - "Feels like" temperature
+- `condition` - Weather condition text (e.g., "thunderstorms")
+- `conditionCode` - Numeric weather condition code
+- `temptype` - Temperature unit ("F" for Fahrenheit)
+- `humidity` - Humidity percentage
+- `uvindex` - UV index value
+- `windspeed` - Wind speed
+- `winddirection` - Wind direction (e.g., "NNW")
+- `windunit` - Wind speed unit ("MPH")
+- `precip` - Precipitation chance percentage
+- `sunrise` - Sunrise time
+- `sunset` - Sunset time
+- `high` - Daily high temperature
+- `low` - Daily low temperature
+- `city` - Current city name
+- `lastupdate` - Last weather update timestamp
+
+### Hourly Forecast (6 hours)
+- `hour1time` through `hour6time` - Time for each hour
+- `hour1temp` through `hour6temp` - Temperature for each hour
+- `hour1precip` through `hour6precip` - Precipitation chance for each hour
+
+### 5-Day Forecast
+- `day1day` through `day5day` - Full day names
+- `day1shortday` through `day5shortday` - Abbreviated day names
+- `day1low` through `day5low` - Low temperatures
+- `day1high` through `day5high` - High temperatures
+- `day1condition` through `day5condition` - Weather conditions
+- `day1icon` through `day5icon` - Weather icon codes
+- `day1precip` through `day5precip` - Precipitation chances
+
+### Moon & Astronomical
+- `moonBrightness` - Moon brightness percentage
+- `moonPhaseString` - Moon phase description (e.g., "Full Moon")
+
+## System Information
+
+### Device Status
+- `devicename` - Device name
+- `devicefirmware` - Device firmware version
+- `ipaddress` - IP address
+- `batterypercent` - Battery percentage
+- `batteryAsInt` - Battery as integer value
+- `ischarging` / `charging` - Charging status
+
+### Connectivity
+- `bluetoothConnected` - Bluetooth connection status
+- `btbattery` - Bluetooth device battery with name
+- `btbatterynoname` - Bluetooth device battery without name
+- `btbatterynonamedisconnected` - Bluetooth battery with disconnect fallback
+- `wifipercent` - WiFi signal strength percentage
+- `wifiname` - WiFi network name
+- `signalpercent` - Cellular signal strength percentage
+
+### Alarms
+- `alarm` - Next alarm time
+- `paddedalarm` - Next alarm time with padding
+
+## Media & Music
+
+### Now Playing
+- `musicTitle` - Current song title
+- `musicArtist` - Current artist name
+- `musicAlbum` - Current album name
+- `musicElapsed` - Elapsed playback time
+- `musicDurationLeft` - Remaining playback time
+- `musicDuration` - Total track duration
+- `musicNowPlayingApp` - Music app name
+
+## App Notifications
+
+### Badge Counts
+- `phoneBadge` - Phone app badge count
+- `mailBadge` - Mail app badge count
+- `messageBadge` - Messages app badge count
+
+## Calendar Events
+
+### Next 3 Events
+- `calEvent1` through `calEvent3` - Event titles
+- `calEvent1WDay` through `calEvent3WDay` - Event with day prefix
+- `calEvent1WDate` through `calEvent3WDate` - Event with date prefix
+- `calEvent1FullDay` through `calEvent3FullDay` - Full day names for events
+- `calEvent1Date` through `calEvent3Date` - Event dates
+- `calEvent1Time` through `calEvent3Time` - Event time ranges
+- `calEvent1Location` through `calEvent3Location` - Event locations
+
+## Health & Fitness
+
+### Activity Data
+- `steps` - Step count
+
+## Symbols & Special Characters
+
+### Common Symbols
+- `degreeSymbol` - Degree symbol (°)
+- `circleSymbol` - Circle symbol (○)
+- `upSymbol` - Up arrow (↑)
+- `downSymbol` - Down arrow (↓)
+- `heartSymbol` - Filled heart (♥)
+- `heartOutlineSymbol` - Outline heart (♡)
+
+## Configuration Methods
+
+### Settings
+- `setTwentyFourHour:` - Enable/disable 24-hour time format
+- `setLanguageDict:` - Set language dictionary for localization
+- `getTwentyFour` - Check if 24-hour format is enabled
+- `languageDict` - Get current language dictionary
+
+## Notes for AI Training
+
+1. **Dynamic vs Static**: Most fields return live data from the device
+2. **Format Awareness**: The class respects 12/24-hour format settings and language localization
+3. **Relative Dates**: Extensive support for dates relative to today (±7 days)
+4. **Weather Integration**: Comprehensive weather data including current, hourly, and 5-day forecasts
+5. **System Integration**: Deep integration with device status, connectivity, and app data
+6. **Customization Focus**: Designed for flexible widget creation with granular data access
+7. **Usage**: "data" : "[textHour]"

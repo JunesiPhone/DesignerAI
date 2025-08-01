@@ -1,0 +1,402 @@
+# Theme Creation Guide for Designer
+
+This guide explains how to create custom themes using the JSON-based widget for Designer's system. Themes are built using a hierarchical view structure with nested UIView containers and various UI elements.
+
+## Basic Structure
+
+Every theme follows this root structure:
+
+```json
+{
+  "PresetView": {
+    "type": "UIView",
+    "frame": {
+      "y": "0",
+      "x": "0", 
+      "width": "screen_width",
+      "height": "screen_height",
+      "userInteractionEnabled": "NO"
+    },
+    "children": {
+      // Your theme elements go here
+    }
+  }
+}
+```
+
+## View Types and Components
+
+### Core View Types
+- **UIView** - Basic container for other elements
+- **UILabel** - Text display with dynamic data support
+- **UIImageView** - Image display (static images or album art)
+- **AppIcon** - App icons with badge support
+- **WeatherIcon** - Weather condition icons with multiple icon sets
+- **BatteryBar** - Animated battery level indicator
+- **BatteryIcon** - Battery icon with percentage fill
+
+## Frame Positioning System
+
+### Coordinate System
+- **x/y**: Absolute pixel positions from top-left
+- **width/height**: Element dimensions in pixels
+
+### Special Positioning Values
+
+#### From Right (FR)
+- `"x": "FR~20"` - 20 pixels from right edge
+- `"x": "FR~0"` - Flush with right edge
+
+#### From Bottom (FB) 
+- `"y": "FB~100"` - 100 pixels from bottom edge
+- `"y": "FB~10"` - 10 pixels from bottom edge
+
+#### Center Alignment
+- `"x": "center"` - Horizontally centered
+- `"y": "center"` - Vertically centered
+
+#### Relative to View
+- `"width": "view_width"` - Full width of parent view
+- `"height": "view_height"` - Full height of parent view
+
+#### Mathematical Expressions
+- `"width": "math(view_width/2)"` - Half the parent width
+- `"width": "math(view_width-40)"` - Parent width minus 40px
+- `"width": "math(view_width+10)"` - Parent width plus 10px
+
+# Blur and Corner Radius Compatibility Issue
+
+## Problem
+Blur effects (`blurAlpha: "1"`) interfere with corner radius rendering, causing corners to appear square instead of rounded.
+
+## Solution
+- **Apply blur only to main containers** - not child elements
+- **Set child elements to `blurAlpha: "0"`** for clean corner rendering
+- **Box shadow alpha must be `"0.00"` not just `"0"`** on blurred elements
+
+## Example Fix
+```json
+{
+  "MainContainer": {
+    "blurAlpha": "1",              // Only main container has blur
+    "cornerRadius": "30",
+    "boxShadow": {
+      "color": "rgba(0, 0, 0, 0.00)"  // Must be 0.00
+    }
+  },
+  "ChildElements": {
+    "blurAlpha": "0",              // No blur = perfect corners
+    "cornerRadius": "20"
+  }
+}
+```
+
+## Key Point
+The glass effect comes from the main container's blur bleeding through to child elements - you don't need blur on every element to achieve glassmorphism.
+
+## Dynamic Data Integration
+
+### Data Field Syntax
+Use square brackets to insert dynamic data: `"[fieldName]"`
+
+#### Common Data Fields
+- `[paddedhour]:[minute]` - Time display (e.g., "09:30")
+- `[day]` - Full day name (e.g., "Monday")
+- `[paddeddate] [month]` - Date format (e.g., "15 January")
+- `[temperature][degreeSymbol]` - Temperature with degree symbol
+- `[condition]` - Weather condition text
+- `[batterypercent]%` - Battery percentage
+- `[musicTitle]` - Currently playing song title
+- `[musicArtist]` - Currently playing artist
+
+### Data Attributes
+Some labels support dynamic formatting:
+```json
+{
+  "data": "[textHour]",
+  "dataAttr": " [minute]",     // Append minute data
+  "fontSizeAttr": "32",        // Dynamic font size
+  "fontColorAttr": "none",     // Dynamic color (if supported)
+  "fontNameAttr": "Bebas.ttf"  // Dynamic font
+}
+```
+
+## Styling Properties
+
+### Colors (RGBA Format)
+- `"backgroundColor": "rgba(0, 0, 0, 1.0)"` - Solid black
+- `"textColor": "rgba(255, 255, 255, 0.5)"` - Semi-transparent white
+- `"borderColor": "rgba(255, 255, 255, 0)"` - Transparent border
+
+### Visual Effects
+```json
+{
+  "cornerRadius": "20",           // Rounded corners
+  "alpha": "0.8",                // Transparency
+  "scale": "0.7",                // Size scaling
+  "rotate": "0",                 // Rotation in degrees
+  "borderWidth": "1",            // Border thickness
+  "blurAlpha": "0",             // Blur effect intensity
+  "gradientImage": "glare.png"   // Gradient overlay image
+}
+```
+
+### Shadows and Glows
+```json
+{
+  "boxShadow": {
+    "x": "0",
+    "y": "3", 
+    "radius": "10",
+    "color": "rgba(0, 0, 0, 0.5)"
+  },
+  "textShadow": {
+    "x": "0",
+    "y": "2",
+    "radius": "5", 
+    "color": "rgba(0, 0, 0, 1.0)"
+  }
+}
+```
+
+## Text Styling
+
+### Font Configuration
+```json
+{
+  "fontName": "Helvetica-Bold",       // System or custom font
+  "fontSize": "24",                  // Size in points
+  "textAlignment": "NSTextAlignmentCenter", // Left, Center, Right
+  "numberOfLines": "1",              // Line limit (0 = unlimited)
+  "textStyle": "uppercase",          // none, uppercase, lowercase, capitalize
+  "kerning": "0"                     // Letter spacing
+}
+```
+
+### Text Alignment Options
+- `NSTextAlignmentLeft`
+- `NSTextAlignmentCenter` 
+- `NSTextAlignmentRight`
+
+## Interactive Elements
+
+### Actions
+```json
+{
+  "actions": "openDrawer",           // Built-in system action
+  "actions": "animation",            // Trigger animation
+  "actions": "playMusic",           // Media control
+  "actions": "none"                 // No interaction
+}
+```
+
+### Common Actions
+- `openDrawer` - Open app drawer
+- `openSpotlight` - Open search
+- `playMusic` - Play/pause music
+- `nextTrack` / `prevTrack` - Music navigation
+- `animation` - Trigger view animations
+
+## Animations
+
+### Basic Animation Syntax
+```json
+{
+  "actions": "animation",
+  "animation": {
+    "elementName": "{ x:100, y:200, width:150, alpha:0.5, speed:0.3, toggle:yes }"
+  }
+}
+```
+
+### Animation Properties
+- `x, y` - New position
+- `width, height` - New dimensions  
+- `alpha` - New transparency
+- `scale` - New size multiplier
+- `speed` - Animation duration (0.1 = fast, 1.0 = slow)
+- `toggle:yes` - Animation reverses on second tap
+- `toggle:no` - Animation only plays forward
+
+## App Icons
+
+### AppIcon Configuration
+```json
+{
+  "type": "AppIcon",
+  "bundleID": "com.apple.mobilesafari",  // App identifier
+  "scale": "0.8",                        // Size scaling
+  "labelColor": "rgba(255,255,255,1)",   // App name color
+  "badgeBGColor": "rgba(255,0,0,1)",     // Badge background
+  "badgeTextColor": "rgba(255,255,255,1)", // Badge text color
+  "alpha": "1"                           // Icon transparency
+}
+```
+
+### Common Bundle IDs
+- `com.apple.mobilesafari` - Safari
+- `com.apple.MobileSMS` - Messages
+- `com.apple.mobilemail` - Mail
+- `com.apple.camera` - Camera
+- `com.apple.Music` - Music
+- `com.apple.Preferences` - Settings
+
+## Weather Components
+
+### Weather Icons
+```json
+{
+  "type": "WeatherIcon",
+  "iconSet": "clima",           // Icon style set
+  "forecast": "none"            // Current conditions
+}
+```
+
+### Forecast Options
+- `none` - Current weather
+- `day1` through `day5` - 5-day forecast days
+- `hour1` through `hour6` - Hourly forecast
+
+### Icon Sets
+- `clima` - Modern weather icons
+- `htc` - HTC-style weather icons
+
+## Battery Components
+
+### Battery Bar
+```json
+{
+  "type": "BatteryBar",
+  "radius": "5",                         // Corner rounding
+  "backColor": "rgba(51,51,51,1.0)",     // Background color
+  "innerColor": "rgba(92,92,92,1.0)",    // Fill color
+  "lowColor": "rgba(255,0,0,1.0)",       // Low battery color
+  "midColor": "rgba(255,153,64,1.0)"     // Medium battery color
+}
+```
+
+### Battery Icon
+```json
+{
+  "type": "BatteryIcon",
+  "backColor": "rgba(255,255,255,1.0)",  // Outline color
+  "innerColor": "rgba(71,71,71,1.0)"     // Fill color
+}
+```
+
+## Layout Patterns
+
+### Centered Container Pattern
+```json
+{
+  "frame": {
+    "y": "center",
+    "x": "center", 
+    "width": "300",
+    "height": "200"
+  }
+}
+```
+
+### Bottom-Anchored Element Pattern
+```json
+{
+  "frame": {
+    "y": "FB~50",        // 50px from bottom
+    "x": "center",       // Horizontally centered
+    "width": "350", 
+    "height": "40"
+  }
+}
+```
+
+### Responsive Width Pattern
+```json
+{
+  "frame": {
+    "x": "10",
+    "width": "math(view_width-20)",  // Full width minus margins
+    "height": "40"
+  }
+}
+```
+
+# Mathematical Expression Limitations
+
+**IMPORTANT:** The `math()` function has parsing limitations and works best with simple, single-operation expressions. Avoid complex nested calculations that can cause theme parsing errors.
+
+## What Works:
+```json
+"width": "math(view_width-40)"          // Simple subtraction
+"width": "math(view_width/2)"           // Simple division  
+"width": "math(view_width+10)"          // Simple addition
+"height": "math(view_height*0.8)"       // Simple multiplication
+```
+
+## What Causes Errors:
+```json
+"width": "math((view_width-140)/3)"                    // Nested parentheses
+"x": "math(15+(view_width-140)/3+10)"                 // Multiple operations
+"x": "math(15+2*(view_width-140)/3+20)"               // Complex chained calculations
+```
+
+## Best Practices:
+- **Use fixed values** when possible for reliable positioning or FB and FR
+- **Break complex layouts** into simpler, separate calculations
+- **Test mathematical expressions** with simple operations first
+- **Consider absolute positioning** over complex responsive calculations for critical layouts
+
+
+## Theme Architecture Examples
+
+### Simple Time Display Theme
+Create a basic time display with date and weather info:
+
+1. **Root Container** - Full screen view
+2. **Time Label** - Large text showing current time
+3. **Date Label** - Smaller text below time
+4. **Weather Info** - Temperature and condition
+5. **Battery Indicator** - Visual battery level
+
+### Multi-Panel Theme
+Create a theme with multiple sliding panels:
+
+1. **Navigation Bar** - Tab selector at bottom
+2. **Panel Container** - Holds multiple panels
+3. **Home Panel** - App icons and system info
+4. **Weather Panel** - Current conditions and forecast
+5. **Music Panel** - Now playing controls
+
+### HTC-Style Theme
+Create a classic HTC-inspired interface:
+
+1. **Flip Clock** - Digital flip-style time display
+2. **Weather Bar** - Current conditions with icon
+3. **Forecast Strip** - 5-day forecast in horizontal layout
+4. **App Drawer** - Expandable app grid
+5. **Dock Bar** - Fixed bottom app shortcuts
+
+## Best Practices
+
+### Performance
+- Use appropriate alpha values (avoid very low values if not needed)
+- Minimize deeply nested view hierarchies
+- Use `"userInteractionEnabled": "NO"` on decorative elements
+
+### Visual Design  
+- Maintain consistent spacing using mathematical expressions
+- Use meaningful corner radius values (typically 5-20px)
+- Apply shadows sparingly for depth without performance impact
+- Choose readable font sizes (minimum 12px for body text)
+
+### Data Integration
+- Always test dynamic data fields with various content lengths
+- Use appropriate text truncation with `numberOfLines`
+- Consider different screen sizes when positioning elements
+
+### Responsive Design
+- Use relative positioning (FR, FB, center) over absolute coordinates
+- Leverage mathematical expressions for responsive widths
+- Test themes on different screen orientations and sizes
+
+This system provides tremendous flexibility for creating custom widget themes while maintaining a consistent, performance-optimized structure.

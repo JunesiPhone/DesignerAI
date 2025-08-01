@@ -1,0 +1,170 @@
+Make a minimal lines theme showing Music, Weather, Battery, and Time/Date
+
+
+I really like @AIThemes/Aligned.json theme, but i've been 
+using it awhile. Can you keep the same style with the stacking
+and equal white space but make a new creative design?
+
+Make a Designer theme.
+Creative use of geometric accents
+Modern typography
+Enhanced visual separation between elements
+Include Time, Date, Weather, Battery
+
+Subtle color gradients and accents
+Enhanced typography with varied font weights
+
+
+
+
+
+
+
+# Designer Theme Variation Prompt Template
+
+Use this template to create new variations of existing Designer themes while maintaining their core design principles.
+
+## Template Structure
+
+```
+I really like the [THEME_NAME] theme, but I've been using it for a while. Can you create a new creative variation that keeps the [CORE_DESIGN_ELEMENTS] but with a [STYLE_DIRECTION] aesthetic?
+
+**Preserve These Elements:**
+- [LIST_SPECIFIC_LAYOUT_PRINCIPLES]
+- [LIST_SPACING_PATTERNS] 
+- [LIST_ORGANIZATIONAL_STRUCTURE]
+
+**Creative Direction:**
+- Style: [AESTHETIC_STYLE] (e.g., glassmorphic, minimal, retro, neon, organic)
+- Color Palette: [COLOR_DIRECTION] (e.g., warm earth tones, cool blues, high contrast, monochromatic)
+- Typography: [FONT_DIRECTION] (e.g., modern sans-serif, elegant serif, bold display fonts)
+- Visual Effects: [EFFECTS_PREFERENCE] (e.g., subtle shadows, dramatic blur, clean lines, textured backgrounds)
+
+**Technical Requirements:**
+- Maintain Designer JSON schema compliance
+- Use only approved data fields from data.txt
+- Ensure proper rgba() color formatting
+- Include automatic theme validation
+- Save as AIThemes/_[NEW_THEME_NAME].json
+```
+
+## Example Usage
+
+### Minimal Variation Request
+```
+I really like the Aligned theme, but I've been using it for a while. Can you create a new creative variation that keeps the stacking layout and equal spacing but with a glassmorphic aesthetic?
+```
+
+### Detailed Variation Request
+```
+I love the JN33 theme's grid layout and information density, but want something fresh. Create a new variation that preserves:
+
+**Preserve These Elements:**
+- 4-column app icon grid layout
+- Time display at the top
+- Weather information integration
+- Consistent 15px spacing between elements
+
+**Creative Direction:**
+- Style: Retro cyberpunk with neon accents
+- Color Palette: Dark background with electric blue, purple, and pink highlights
+- Typography: Futuristic monospace fonts with some script elements
+- Visual Effects: Subtle glow effects, sharp geometric borders, minimal blur
+
+**Technical Requirements:**
+- Maintain all current data integrations
+- Ensure theme validates against Designer schema
+- Keep performance optimized (no complex math expressions)
+- Name it "CyberGrid"
+```
+
+## Key Elements to Specify
+
+### 1. Source Theme Analysis
+- **Layout Structure**: Grid, stack, centered, asymmetrical
+- **Information Hierarchy**: What's primary, secondary, tertiary
+- **Spacing System**: Consistent margins, padding patterns
+- **Component Types**: Time, weather, apps, system info, media
+
+### 2. Creative Constraints
+- **Preserve**: Elements that make the original theme beloved
+- **Transform**: Areas open for creative interpretation
+- **Enhance**: Aspects that could be improved or modernized
+
+### 3. Style Direction Options
+
+#### Visual Aesthetics
+- **Glassmorphic**: Blur effects, transparency, layered cards
+- **Minimalist**: Clean lines, lots of whitespace, simple typography
+- **Retro**: Vintage colors, classic fonts, nostalgic elements
+- **Neon/Cyberpunk**: Bright accents, dark backgrounds, futuristic fonts
+- **Organic**: Rounded corners, natural colors, flowing layouts
+- **Industrial**: Sharp edges, metallic colors, bold typography
+- **Elegant**: Sophisticated colors, refined fonts, subtle effects
+
+#### Color Palettes
+- **Monochromatic**: Single color with various tints/shades
+- **Complementary**: Opposite colors on color wheel
+- **Analogous**: Adjacent colors on color wheel
+- **Triadic**: Three evenly spaced colors
+- **Earth Tones**: Browns, greens, warm neutrals
+- **Cool Palette**: Blues, purples, cool grays
+- **High Contrast**: Bold darks and lights
+- **Pastels**: Soft, muted colors
+
+#### Typography Styles
+- **Modern Sans**: HelveticaNeue, AvenirNext families
+- **Display**: Bold, attention-grabbing headers
+- **Monospace**: Consistent character width for technical feel
+- **Script**: Elegant, flowing letterforms
+- **Condensed**: Space-efficient, modern look
+
+### 4. Technical Specifications
+
+#### Required Validations
+- JSON syntax and UIView hierarchy
+- PresetView dimensions (screen_width/screen_height)
+- rgba() color format (no hex)
+- Approved iOS fonts from fonts.txt
+- Valid data fields from data.txt
+- Required UIView properties: backgroundColor, borderWidth, cornerRadius
+- Required UILabel properties: data, fontName, textAlignment, backgroundColor, borderWidth, numberOfLines
+
+#### Performance Guidelines
+- Avoid complex nested math expressions
+- Use container-based layouts for multiple elements
+- Implement proper blur hierarchy (main containers blur, children don't)
+- Keep positioning calculations simple and reliable
+
+#### File Management
+- Save in AIThemes/ directory with underscore prefix
+- Use descriptive theme names
+- Include brief implementation explanation
+
+## Advanced Prompt Examples
+
+### Style Override System Request
+```
+Create a variation of JN15 that maintains the app icon grid but implements a master style controller system. I want to be able to easily change all icon styling by modifying just one master element. Use a dark theme with colorful accent borders that can be easily customized.
+```
+
+### Animation Integration Request
+```
+Take the music-focused elements from Scroll theme and create a new version with dynamic play/pause button animations. Preserve the album art display and track info layout, but add sophisticated state-based animations that respond to music playback status. Style it with a modern gradient background.
+```
+
+### Conditional Display Request
+```
+Create a variation of the weather-heavy themes that shows different information based on conditions - more detailed info during severe weather, simplified display during normal conditions. Keep the core weather data layout but make it contextually intelligent.
+```
+
+## Tips for Best Results
+
+1. **Be Specific About Preservation**: Clearly state which layout principles you want maintained
+2. **Provide Style References**: Use descriptive aesthetic terms and color directions
+3. **Consider Use Cases**: Think about when and how you'll use the theme
+4. **Technical Awareness**: Mention any specific Designer features you want utilized
+5. **Validation Focus**: Always request automatic theme validation
+6. **Naming Convention**: Suggest a descriptive name for the new theme
+
+This template ensures you get creative, functional theme variations that maintain the beloved aspects of your original themes while introducing fresh, modern aesthetics.

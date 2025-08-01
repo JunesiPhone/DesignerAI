@@ -1,0 +1,290 @@
+# iOS Font Reference for Designer
+
+## Arabic Fonts
+- **AlNile** - Clean Arabic script font
+- **AlNile-Bold** - Bold weight Arabic script
+
+### BEBAS (Bold Font)
+
+## Asian Fonts
+### Apple SD Gothic Neo (Korean)
+- **AppleSDGothicNeo-Regular** - Standard Korean text
+- **AppleSDGothicNeo-Thin** - Ultra-light Korean, great for minimal designs
+- **AppleSDGothicNeo-UltraLight** - Extremely thin Korean font
+- **AppleSDGothicNeo-Light** - Light Korean weight
+- **AppleSDGothicNeo-Medium** - Medium Korean weight
+- **AppleSDGothicNeo-SemiBold** - Semi-bold Korean
+- **AppleSDGothicNeo-Bold** - Bold Korean font
+
+### PingFang (Chinese)
+#### Hong Kong
+- **PingFangHK-Regular** - Standard Chinese Traditional
+- **PingFangHK-Ultralight** - Ultra-thin Chinese
+- **PingFangHK-Thin** - Thin Chinese
+- **PingFangHK-Light** - Light Chinese
+- **PingFangHK-Medium** - Medium Chinese
+- **PingFangHK-Semibold** - Semi-bold Chinese
+
+#### Simplified Chinese
+- **PingFangSC-Regular** - Standard Simplified Chinese
+- **PingFangSC-Ultralight** - Ultra-thin Simplified Chinese
+- **PingFangSC-Thin** - Thin Simplified Chinese
+- **PingFangSC-Light** - Light Simplified Chinese
+- **PingFangSC-Medium** - Medium Simplified Chinese
+- **PingFangSC-Semibold** - Semi-bold Simplified Chinese
+
+#### Traditional Chinese
+- **PingFangTC-Regular** - Standard Traditional Chinese
+- **PingFangTC-Ultralight** - Ultra-thin Traditional Chinese
+- **PingFangTC-Thin** - Thin Traditional Chinese
+- **PingFangTC-Light** - Light Traditional Chinese
+- **PingFangTC-Medium** - Medium Traditional Chinese
+- **PingFangTC-Semibold** - Semi-bold Traditional Chinese
+
+## Core System Fonts
+### Arial Family
+- **ArialMT** - Standard Arial
+- **Arial-ItalicMT** - Arial Italic
+- **Arial-BoldMT** - Arial Bold
+- **Arial-BoldItalicMT** - Arial Bold Italic
+- **ArialRoundedMTBold** - Rounded Arial, friendly for UI elements
+
+### Helvetica Family
+- **Helvetica** - Classic neutral sans-serif
+- **Helvetica-Oblique** - Helvetica Italic
+- **Helvetica-Light** - Light Helvetica
+- **Helvetica-LightOblique** - Light Helvetica Italic
+- **Helvetica-Bold** - Bold Helvetica
+- **Helvetica-BoldOblique** - Bold Helvetica Italic
+
+### Helvetica Neue (Modern Helvetica)
+- **HelveticaNeue** - Standard modern Helvetica
+- **HelveticaNeue-Italic** - Modern Helvetica Italic
+- **HelveticaNeue-UltraLight** - Ultra-thin, perfect for large display text
+- **HelveticaNeue-UltraLightItalic** - Ultra-thin italic
+- **HelveticaNeue-Thin** - Thin weight, great for minimal designs
+- **HelveticaNeue-ThinItalic** - Thin italic
+- **HelveticaNeue-Light** - Light weight
+- **HelveticaNeue-LightItalic** - Light italic
+- **HelveticaNeue-Medium** - Medium weight
+- **HelveticaNeue-MediumItalic** - Medium italic
+- **HelveticaNeue-Bold** - Bold weight
+- **HelveticaNeue-BoldItalic** - Bold italic
+- **HelveticaNeue-CondensedBold** - Condensed bold, great for headers
+- **HelveticaNeue-CondensedBlack** - Extra condensed black weight
+
+## Geometric & Modern Fonts
+### Avenir Family
+- **Avenir-Book** - Standard book weight
+- **Avenir-Roman** - Roman style
+- **Avenir-BookOblique** - Book oblique
+- **Avenir-Oblique** - Standard oblique
+- **Avenir-Light** - Light weight
+- **Avenir-LightOblique** - Light oblique
+- **Avenir-Medium** - Medium weight
+- **Avenir-MediumOblique** - Medium oblique
+- **Avenir-Heavy** - Heavy weight
+- **Avenir-HeavyOblique** - Heavy oblique
+- **Avenir-Black** - Black weight
+- **Avenir-BlackOblique** - Black oblique
+
+### Avenir Next (Updated Avenir)
+- **AvenirNext-Regular** - Standard Avenir Next
+- **AvenirNext-Italic** - Avenir Next Italic
+- **AvenirNext-UltraLight** - Ultra-light, great for large text
+- **AvenirNext-UltraLightItalic** - Ultra-light italic
+- **AvenirNext-Medium** - Medium weight
+- **AvenirNext-MediumItalic** - Medium italic
+- **AvenirNext-DemiBold** - Demi-bold weight
+- **AvenirNext-DemiBoldItalic** - Demi-bold italic
+- **AvenirNext-Bold** - Bold weight
+- **AvenirNext-BoldItalic** - Bold italic
+- **AvenirNext-Heavy** - Heavy weight
+- **AvenirNext-HeavyItalic** - Heavy italic
+
+### Avenir Next Condensed
+- **AvenirNextCondensed-Regular** - Condensed regular
+- **AvenirNextCondensed-Italic** - Condensed italic
+- **AvenirNextCondensed-UltraLight** - Ultra-light condensed
+- **AvenirNextCondensed-UltraLightItalic** - Ultra-light condensed italic
+- **AvenirNextCondensed-Medium** - Medium condensed
+- **AvenirNextCondensed-MediumItalic** - Medium condensed italic
+- **AvenirNextCondensed-DemiBold** - Demi-bold condensed
+- **AvenirNextCondensed-DemiBoldItalic** - Demi-bold condensed italic
+- **AvenirNextCondensed-Bold** - Bold condensed
+- **AvenirNextCondensed-BoldItalic** - Bold condensed italic
+- **AvenirNextCondensed-Heavy** - Heavy condensed
+- **AvenirNextCondensed-HeavyItalic** - Heavy condensed italic
+
+### Futura Family
+- **Futura-Medium** - Standard Futura medium
+- **Futura-MediumItalic** - Futura medium italic
+- **Futura-Bold** - Futura bold
+- **Futura-CondensedMedium** - Condensed medium
+- **Futura-CondensedExtraBold** - Extra bold condensed
+
+### DIN Family (Industrial/Technical)
+- **DINAlternate-Bold** - Bold DIN alternate
+- **DINCondensed-Bold** - Condensed DIN, great for large numbers
+
+## Serif & Traditional Fonts
+### Gill Sans Family
+- **GillSans** - Classic humanist sans-serif
+- **GillSans-Italic** - Gill Sans italic
+- **GillSans-Light** - Light weight
+- **GillSans-LightItalic** - Light italic
+- **GillSans-SemiBold** - Semi-bold weight
+- **GillSans-SemiBoldItalic** - Semi-bold italic
+- **GillSans-Bold** - Bold weight
+- **GillSans-BoldItalic** - Bold italic
+- **GillSans-UltraBold** - Ultra-bold weight
+
+### Verdana Family
+- **Verdana** - Web-optimized sans-serif
+- **Verdana-Italic** - Verdana italic
+- **Verdana-Bold** - Verdana bold
+- **Verdana-BoldItalic** - Verdana bold italic
+
+## Monospace Fonts
+### Courier Family
+- **Courier** - Standard typewriter font
+- **Courier-Oblique** - Courier oblique
+- **Courier-Bold** - Courier bold
+- **Courier-BoldOblique** - Courier bold oblique
+
+### Courier New
+- **CourierNewPSMT** - PostScript Courier New
+- **CourierNewPS-ItalicMT** - Courier New italic
+- **CourierNewPS-BoldMT** - Courier New bold
+- **CourierNewPS-BoldItalicMT** - Courier New bold italic
+
+### Menlo (Code Font)
+- **Menlo-Regular** - Standard code font
+- **Menlo-Italic** - Menlo italic
+- **Menlo-Bold** - Menlo bold
+- **Menlo-BoldItalic** - Menlo bold italic
+
+## Display & Decorative Fonts
+### Marker Felt (Handwritten)
+- **MarkerFelt-Thin** - Thin handwritten style
+- **MarkerFelt-Wide** - Wide handwritten style
+
+### Papyrus (Textured)
+- **Papyrus** - Textured decorative font
+- **Papyrus-Condensed** - Condensed Papyrus
+
+## Font Usage Guidelines for Widget Design
+
+### For Large Time Displays
+- **HelveticaNeue-UltraLight** - Ultra-minimal, modern
+- **AvenirNext-UltraLight** - Geometric, clean
+- **AppleSDGothicNeo-UltraLight** - Soft, rounded
+- **DINCondensed-Bold** - Industrial, condensed
+- **Futura-Bold** - Geometric, strong
+
+### For Secondary Information
+- **HelveticaNeue-Light** - Subtle, clean
+- **AvenirNext-Medium** - Balanced, readable
+- **AppleSDGothicNeo-Light** - Soft, approachable
+- **Futura-Medium** - Geometric, modern
+
+### For Technical/Digital Aesthetics
+- **Menlo-Bold** - Monospace, code-like
+- **CourierNewPS-BoldMT** - Typewriter, retro
+- **DINAlternate-Bold** - Industrial, technical
+
+### For Friendly/Approachable Designs
+- **ArialRoundedMTBold** - Rounded, friendly
+- **GillSans** - Humanist, warm
+- **MarkerFelt-Thin** - Handwritten, personal
+
+### For Luxury/Premium Feel
+- **AvenirNext-Heavy** - Sophisticated weight
+- **HelveticaNeue-CondensedBlack** - Strong, premium
+- **Futura-CondensedExtraBold** - Geometric luxury
+
+## Font Pairing Suggestions
+
+### Modern Minimal
+- **Primary**: HelveticaNeue-UltraLight (time)
+- **Secondary**: HelveticaNeue-Light (date/info)
+
+### Geometric Contemporary  
+- **Primary**: AvenirNext-Bold (time)
+- **Secondary**: AvenirNext-UltraLight (secondary info)
+
+### Industrial/Technical
+- **Primary**: DINCondensed-Bold (time)
+- **Secondary**: Menlo-Regular (details)
+
+### Soft/Organic
+- **Primary**: AppleSDGothicNeo-UltraLight (time)
+- **Secondary**: AppleSDGothicNeo-Light (info)
+
+## Custom/Third-Party Fonts
+### Display & Decorative Fonts
+- **2BR_SC.ttf** - Bold decorative font
+- **AAabnes.otf** - Modern sans-serif
+- **AAMulticolore.otf** - Colorful display font
+- **abnes.ttf** - Clean sans-serif
+- **AgafiaRosdina.ttf** - Elegant script font
+- **AlmostJapanese.ttf** - Japanese-inspired font
+- **Artlookin-Regular.ttf** - Artistic display font
+- **Atami-Bold.otf** - Bold modern sans
+- **Atami-Display-Bold.otf** - Display version bold
+- **Atami-Regular.otf** - Clean modern sans
+- **batmfo__.ttf** - Comic/cartoon style
+- **Bebas.ttf** - Condensed sans-serif
+- **bebasbold.otf** - Bold condensed sans
+- **BebasNeue Book.otf** - Book weight Bebas
+- **Bernier.otf** - Decorative font
+- **bikoblack.otf** - Black weight modern sans
+- **bikoregular.otf** - Regular weight modern sans
+- **Bold.ttf** - Generic bold font
+- **building.otf** - Architectural/technical font
+- **Cherry Monospace-Light.ttf** - Light monospace font
+- **chocolatecake.ttf** - Playful display font
+- **climaiconFont.ttf** - Weather icon font
+- **Corporate-Logo-Rounded.ttf** - Rounded corporate font
+- **CovesBold.otf** - Bold serif font
+- **Cubano.ttf** - Bold geometric sans
+- **dead.otf** - Gothic/horror style font
+- **dealerplate_california.otf** - License plate style
+- **digital-7.ttf** - Digital/LCD display font
+- **entypo.otf** - Icon font
+- **Future.ttf** - Futuristic sans-serif
+- **Galyon-Bold.otf** - Bold geometric font
+- **GlacialIndifference-Bold.otf** - Bold minimal sans
+- **GreatVibes-Regular.ttf** - Script/handwriting font
+- **Groovy_Fast.ttf** - Retro display font
+- **gymnast.ttf** - Athletic/sports font
+- **Headache-Font-OTF.otf** - Distressed/grunge font
+- **Heavitas.ttf** - Heavy weight sans
+- **lcd.otf** - LCD/digital display font
+- **LEMONMILK-Bold.otf** - Bold rounded sans
+- **LoveloBlack.otf** - Black weight display font
+- **Mashup.otf** - Mixed style font
+- **mat1.otf** - Technical/industrial font
+- **Mefirah.ttf** - Decorative serif
+- **mikadobold.otf** - Bold Asian-inspired font
+- **mikadoregular.otf** - Regular Asian-inspired font
+- **Net-Carthart.ttf** - Technical/chart font
+- **Neutra.otf** - Neutral sans-serif
+- **Now-Bold.otf** - Bold contemporary sans
+- **perfo.otf** - Perforated/dot matrix style
+- **PhenomenaBlack.otf** - Black weight display font
+- **Plasma09.ttf** - Sci-fi/futuristic font
+- **Poppins-Bold.otf** - Bold geometric sans
+- **ProductSansBold.ttf** - Bold product sans
+- **Ronde-B_square.otf** - Rounded square font
+- **samsungexlight.otf** - Extra light Samsung font
+- **samsunglight.otf** - Light Samsung font
+- **Signatrue.otf** - Signature/script font
+- **Signerica_Fat.ttf** - Fat script font
+- **Street-Robot-Inline.ttf** - Inline robotic font
+- **The Hustle.ttf** - Street/urban font
+- **WindleshamProBold.ttf** - Bold professional font
+- **Young.ttf** - Youthful display font
+- **zephyr_jubilee.ttf** - Celebratory font
+- **Zhai.ttf** - Minimalist font
+- **Zuberfuturefreepromo.ttf** - Futuristic promotional font
