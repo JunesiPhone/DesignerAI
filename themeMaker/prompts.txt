@@ -1,7 +1,7 @@
 Make a minimal lines theme showing Music, Weather, Battery, and Time/Date
 
 
-I really like @AIThemes/Aligned.json theme, but i've been 
+I really like @theme references/Aligned.json theme, but i've been 
 using it awhile. Can you keep the same style with the stacking
 and equal white space but make a new creative design?
 
