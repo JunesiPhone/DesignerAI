@@ -66,7 +66,7 @@ To show dynamic information like time, date, or weather, use special data placeh
 -   Battery: `[batterypercent]`
 -   Weather: `[temperature]`, `[temptype]`, `[condition]`, `[windspeed]`, `[windunit]`
 
-**Note**: When making a theme grep to make sure the data value is correct and will pull the right data. All of htem are in the `data.txt` file.
+**Note**: When making a theme grep to make sure the data value is correct and will pull the right data. All of them are in the `training data/data.txt` file.
 
 ## 5. Styling and Visuals
 
@@ -80,7 +80,7 @@ To show dynamic information like time, date, or weather, use special data placeh
 
 -   **`fontName`**: Specify the font file (e.g., `"Bebas.ttf"`).
 -   **`fontSize`**: The size of the font.
--   **CRITICAL**: You must use fonts available in the Designer system. Refer to `fonts.txt` for a list of valid font names.
+-   **CRITICAL**: You must use fonts available in the Designer system. Refer to `training data/fonts.txt` for a list of valid font names.
 
 ### Other Visual Properties:
 

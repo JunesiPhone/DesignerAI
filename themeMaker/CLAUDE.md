@@ -23,9 +23,9 @@ Designer is an iOS app that allows users to create custom widgets using JSON-bas
 1. **Analyze Image or Prompt (if provided)**: Extract layout specifications (element count, types, positions, content types) focusing on structure, not styling.
 
 **CRITICAL** 
-2. **Make a plan**: Plan out the UI elements now you have the structure. Look for custom fonts. If there is any UILabels involved please verify the 'data' property. Make a list of all the data values then verify it exists in `data.txt` you can do this quickly by using grep or a search. Example: Search(pattern: "temperature|humidity|batterypercent|paddedhou
+2. **Make a plan**: Plan out the UI elements now you have the structure. Look for custom fonts. If there is any UILabels involved please verify the 'data' property. Make a list of all the data values then verify it exists in `training data/data.txt` you can do this quickly by using grep or a search. Example: Search(pattern: "temperature|humidity|batterypercent|paddedhou
         r|paddeddate|shortmonth|year|shortday", path:
-        "data.txt")
+        "training data/data.txt")
 
 3. **Create Theme**: Build a JSON theme file with proper structure, styling, and dynamic data.
 
@@ -36,15 +36,15 @@ Designer is an iOS app that allows users to create custom widgets using JSON-bas
 
 ## Key Documentation Files
 
-- `theme.txt`: Complete theme creation guide with syntax, components, and patterns.
+- `training data/theme.txt`: Complete theme creation guide with syntax, components, and patterns.
 
-- `data.txt`: Comprehensive list of all available dynamic data fields (e.g., `[paddedhour]`, `[minute]`, `[temperature]`, `[batterypercent]`, `[musicTitle]`, `[calEvent1]`).
+- `training data/data.txt`: Comprehensive list of all available dynamic data fields (e.g., `[paddedhour]`, `[minute]`, `[temperature]`, `[batterypercent]`, `[musicTitle]`, `[calEvent1]`).
 
-- `final.txt`: Complete system reference for AI training with detailed examples.
+- `training data/final.txt`: Complete system reference for AI training with detailed examples.
 
-- `advanced.txt`: Advanced features including blur effects, animations, and conditional display.
+- `training data/advanced.txt`: Advanced features including blur effects, animations, and conditional display.
 
-- `fonts.txt`: Complete iOS font reference with usage guidelines.
+- `training data/fonts.txt`: Complete iOS font reference with usage guidelines.
 
 - `theme references/`: Example themes to check against JSON files (JN07.json, JN15.json, JN33.json, Scroll.json).
 
@@ -69,13 +69,13 @@ Designer is an iOS app that allows users to create custom widgets using JSON-bas
     - Validate property names against `theme references/`.
   
   - **Dynamic Data**:
-    - Use fields from `data.txt` only (e.g., `[temperature]`, `[batterypercent]`).
+    - Use fields from `training data/data.txt` only (e.g., `[temperature]`, `[batterypercent]`).
     - Verify field names to avoid blank or failed displays.
     - Consider text length (e.g., avoid `[textHour] [textMinute]` for small UI, as it may produce long strings like "TEN SIXTEEN").
 
   - **Styling**:
     - Use rgba() color format only (e.g., `rgba(255,255,255,1.0)`), never hex.
-    - Use iOS system fonts from `fonts.txt` (e.g., HelveticaNeue-UltraLight, AvenirNext-Heavy).
+    - Use iOS system fonts from `training data/fonts.txt` (e.g., HelveticaNeue-UltraLight, AvenirNext-Heavy).
     - Apply glassmorphism: Blur on main containers, `blurAlpha: "0"` on children.
     - Support standard properties: animation, blurIntensity, childorder, userInteraction, cornerRadius, alpha, scale, rotate.
 
@@ -122,7 +122,7 @@ Designer is an iOS app that allows users to create custom widgets using JSON-bas
 **Constraints**:
   - Never resize PresetView.
   - Test for content length and hierarchy integrity.
-  - Verify as you build, check data values against `data.txt`
+  - Verify as you build, check data values against `training data/data.txt`
 
 ## Additional Notes
 - **File Naming**: Save themes in `AIThemes/_<ThemeName>.json`.
