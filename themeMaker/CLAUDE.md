@@ -23,30 +23,40 @@ Designer is an iOS app that allows users to create custom widgets using JSON-bas
 1. **Analyze Image or Prompt (if provided)**: Extract layout specifications (element count, types, positions, content types) focusing on structure, not styling.
 
 **CRITICAL** 
-2. **Make a plan**: Plan out the UI elements now you have the structure. Look for custom fonts. If there is any UILabels involved please verify the 'data' property. Make a list of all the data values then verify it exists in `training data/data.txt` you can do this quickly by using grep or a search. Example: Search(pattern: "temperature|humidity|batterypercent|paddedhou
+2. **Make a plan**: Plan out the UI elements now you have the structure. Look for custom fonts. If there is any UILabels involved please verify the 'data' property. Make a list of all the data values then verify it exists in `training_data/data.txt` you can do this quickly by using grep or a search. Example: Search(pattern: "minute|temperature|humidity|batterypercent|paddedhou
         r|paddeddate|shortmonth|year|shortday", path:
-        "training data/data.txt")
+        "training_data/data.txt")
+
+- Correct data field from paddedminute to minute
+- Add required childOrder properties to all UIView containers
+- Add missing children: {} to leaf UIView elements
 
 3. **Create Theme**: Build a JSON theme file with proper structure, styling, and dynamic data.
 
 4. **Dont Explain**: Once theme is created just say its done, no need to explain the theme. Just say it's done.
 
 
+**TEST**
+**If User prompts to test the theme for issues** you should do this: 
+1. **Extract every 'data' property.** Then search and verify they exist in the `training_data/data.txt` file. Fix to correct data values.
+2. **Check all childOrder** properties on all UIView,
+UIScrollview, etc. Add required childOrder properties for childOrder and children.
+
 
 
 ## Key Documentation Files
 
-- `training data/theme.txt`: Complete theme creation guide with syntax, components, and patterns.
+- `training_data/theme.txt`: Complete theme creation guide with syntax, components, and patterns.
 
-- `training data/data.txt`: Comprehensive list of all available dynamic data fields (e.g., `[paddedhour]`, `[minute]`, `[temperature]`, `[batterypercent]`, `[musicTitle]`, `[calEvent1]`).
+- `training_data/data.txt`: Comprehensive list of all available dynamic data fields (e.g., `[paddedhour]`, `[minute]`, `[temperature]`, `[batterypercent]`, `[musicTitle]`, `[calEvent1]`).
 
-- `training data/final.txt`: Complete system reference for AI training with detailed examples.
+- `training_data/final.txt`: Complete system reference for AI training with detailed examples.
 
-- `training data/advanced.txt`: Advanced features including blur effects, animations, and conditional display.
+- `training_data/advanced.txt`: Advanced features including blur effects, animations, and conditional display.
 
-- `training data/fonts.txt`: Complete iOS font reference with usage guidelines.
+- `training_data/fonts.txt`: Complete iOS font reference with usage guidelines.
 
-- `theme references/`: Example themes to check against JSON files (JN07.json, JN15.json, JN33.json, Scroll.json).
+- `theme_references/`: Example themes to check against JSON files (JN07.json, JN15.json, JN33.json, Scroll.json).
 
 
 
@@ -58,7 +68,7 @@ Designer is an iOS app that allows users to create custom widgets using JSON-bas
 
 - **Input**: Image analysis report, user requirements, or existing theme.
 
-- **Output**: JSON file saved in `AIThemes/_<ThemeName><randomnumber>.json`, with implementation explanation.
+- **Output**: JSON file saved in `themeMaker/AIThemes/_<ThemeName><randomnumber>.json`, with implementation explanation.
 - **Requirements**:
   - **Structure**:
     - Start with immutable PresetView container (no metadata fields like author/version).
@@ -66,16 +76,16 @@ Designer is an iOS app that allows users to create custom widgets using JSON-bas
     - All UIView elements require: `backgroundColor`, `borderWidth`, `cornerRadius` (even if default values).
     - All UILabel elements require: `data` (not `text`), `fontName` (not `font`), `textAlignment` as `NSTextAlignmentLeft/Center/Right`, `backgroundColor`, `borderWidth`, `numberOfLines`.
     - Weather icons use `WeatherIcon` type with `forecast` ("current", "day1", etc.) and `iconSet` ("clima") properties.
-    - Validate property names against `theme references/`.
+    - Validate property names against `theme_references/`.
   
   - **Dynamic Data**:
-    - Use fields from `training data/data.txt` only (e.g., `[temperature]`, `[batterypercent]`).
+    - Use fields from `training_data/data.txt` only (e.g., `[temperature]`, `[batterypercent]`).
     - Verify field names to avoid blank or failed displays.
     - Consider text length (e.g., avoid `[textHour] [textMinute]` for small UI, as it may produce long strings like "TEN SIXTEEN").
 
   - **Styling**:
     - Use rgba() color format only (e.g., `rgba(255,255,255,1.0)`), never hex.
-    - Use iOS system fonts from `training data/fonts.txt` (e.g., HelveticaNeue-UltraLight, AvenirNext-Heavy).
+    - Use iOS system fonts from `training_data/fonts.txt` (e.g., HelveticaNeue-UltraLight, AvenirNext-Heavy).
     - Apply glassmorphism: Blur on main containers, `blurAlpha: "0"` on children.
     - Support standard properties: animation, blurIntensity, childorder, userInteraction, cornerRadius, alpha, scale, rotate.
 
@@ -122,9 +132,9 @@ Designer is an iOS app that allows users to create custom widgets using JSON-bas
 **Constraints**:
   - Never resize PresetView.
   - Test for content length and hierarchy integrity.
-  - Verify as you build, check data values against `training data/data.txt`
+  - Verify as you build, check data values against `training_data/data.txt`
 
 ## Additional Notes
-- **File Naming**: Save themes in `AIThemes/_<ThemeName>.json`.
+- **File Naming**: Save themes in `themeMaker/AIThemes/_<ThemeName>.json`.
 
 - **Accessibility**: Ensure text legibility and sufficient contrast in themes.

@@ -162,6 +162,23 @@
 - `heartSymbol` - Filled heart (♥)
 - `heartOutlineSymbol` - Outline heart (♡)
 
+### Common GradientImage
+- gradient_cool_blues.png
+- gradient_cosmic_dust.png
+- gradient_dark_mode.png
+- gradient_discord_purple.png
+- gradient_figma_colors.png
+- gradient_forest_mist.png
+- gradient_instagram_classic.png
+- gradient_lavender_fields.png
+- gradient_peach_fuzz.png
+- gradient_purple_haze.png
+- gradient_shadow_dance.png
+- gradient_slack_purple.png
+- gradient_tiktok_neon.png
+- gradient_twitter_blue.png
+- gradient_warm_sunset.png
+
 ## Configuration Methods
 
 ### Settings

@@ -1,7 +1,7 @@
 Make a minimal lines theme showing Music, Weather, Battery, and Time/Date
 
 
-I really like @theme references/Aligned.json theme, but i've been 
+I really like @theme_references/Aligned.json theme, but i've been 
 using it awhile. Can you keep the same style with the stacking
 and equal white space but make a new creative design?
 
@@ -15,6 +15,23 @@ Subtle color gradients and accents
 Enhanced typography with varied font weights
 
 
+## Design Principles
+
+  🎯 Modern Design Principles:
+  - Asymmetrical Balance: Time card left, weather card right, creates
+   dynamic tension
+  - Modular Cards: Each information group in its own glass card
+  - Breathing Room: Generous negative space between elements
+  - Natural Reading Flow: Information flows naturally down the screen
+
+  🔥 Subtle Elegance:
+  - Mixed Glass Effects: Dark blur for time, light blur for weather
+  - Left-Aligned Content: More natural, less formal than center
+  - Consistent Typography
+  - Color Coding: Blue accents for precipitation data
+
+  This approach is much more modern and breathing - like Apple's
+  design language with asymmetry and focused information hierarchy.
 
 
 

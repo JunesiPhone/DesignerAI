@@ -1,0 +1,177 @@
+{
+  "PresetView" : {
+    "type" : "UIView",
+    "frame" : {
+      "y" : "0",
+      "userInteractionEnabled" : "NO",
+      "x" : "0",
+      "width" : "screen_width",
+      "height" : "screen_height"
+    },
+    "children" : {
+      "GlassPanel" : {
+        "boxShadow" : {
+          "y" : "3",
+          "radius" : "3",
+          "x" : "0",
+          "color" : "rgba(0,0,0,0)"
+        },
+        "cutWithView" : "none",
+        "frame" : {
+          "y" : "FB~350",
+          "x" : "center",
+          "width" : "320",
+          "height" : "170"
+        },
+        "triggerOnUnlock" : "none",
+        "showWhenCharging" : "NO",
+        "borderWidth" : "0",
+        "backgroundColor" : "rgba(255, 255, 255, 0.00)",
+        "autoLayout" : "none",
+        "showWhenPlaying" : "NO",
+        "followWidthOffset" : "x,y",
+        "children" : {
+          "Glass" : {
+            "boxShadow" : {
+              "y" : "3",
+              "radius" : "3",
+              "x" : "0",
+              "color" : "rgba(0,0,0,0)"
+            },
+            "cutWithView" : "none",
+            "frame" : {
+              "y" : "0",
+              "x" : "0",
+              "width" : "320",
+              "height" : "150"
+            },
+            "triggerOnUnlock" : "none",
+            "showWhenCharging" : "NO",
+            "borderWidth" : "1",
+            "backgroundColor" : "rgba(255,255,255,0.3)",
+            "autoLayout" : "none",
+            "showWhenPlaying" : "YES",
+            "followWidthOffset" : "x,y",
+            "children" : {
+
+            },
+            "blurAlpha" : "1",
+            "cornerRadius" : "20",
+            "type" : "UIView",
+            "childorder" : "",
+            "rotate" : "0",
+            "blurIntensity" : "5",
+            "alpha" : "1",
+            "triggerOnWake" : "none",
+            "scale" : "0",
+            "gradientImage" : "none",
+            "maskURL" : "none",
+            "followWidthItem" : "none",
+            "borderColor" : "rgba(255, 255, 255, 0.31)",
+            "actions" : "none",
+            "userInteraction" : "YES",
+            "animation" : "none",
+            "blurColor" : "light2"
+          },
+          "CutShadow" : {
+            "boxShadow" : {
+              "y" : "3",
+              "radius" : "3",
+              "x" : "0",
+              "color" : "rgba(0,0,0,0)"
+            },
+            "cutWithView" : "none",
+            "frame" : {
+              "y" : "FB~0",
+              "x" : "10",
+              "width" : "300",
+              "height" : "25"
+            },
+            "triggerOnUnlock" : "none",
+            "showWhenCharging" : "NO",
+            "borderWidth" : "0",
+            "backgroundColor" : "rgba(255, 255, 255, 0.00)",
+            "autoLayout" : "none",
+            "showWhenPlaying" : "NO",
+            "followWidthOffset" : "x,y",
+            "children" : {
+              "shadow" : {
+                "boxShadow" : {
+                  "y" : "8",
+                  "radius" : "7",
+                  "x" : "0",
+                  "color" : "rgba(0,0,0,0.5)"
+                },
+                "cutWithView" : "none",
+                "frame" : {
+                  "y" : "-21",
+                  "x" : "5",
+                  "width" : "290",
+                  "height" : "20"
+                },
+                "triggerOnUnlock" : "none",
+                "showWhenCharging" : "NO",
+                "borderWidth" : "0",
+                "backgroundColor" : "rgba(255, 255, 255, 1.00)",
+                "autoLayout" : "none",
+                "showWhenPlaying" : "NO",
+                "followWidthOffset" : "x,y",
+                "blurAlpha" : "0",
+                "cornerRadius" : "5",
+                "type" : "UIView",
+                "childorder" : "none",
+                "rotate" : "0",
+                "blurIntensity" : "10",
+                "alpha" : "1",
+                "triggerOnWake" : "none",
+                "scale" : "0",
+                "gradientImage" : "none",
+                "maskURL" : "none",
+                "followWidthItem" : "none",
+                "borderColor" : "rgba(255,255,255,0)",
+                "actions" : "none",
+                "userInteraction" : "YES",
+                "animation" : "none",
+                "blurColor" : "dark"
+              }
+            },
+            "blurAlpha" : "0",
+            "cornerRadius" : "5",
+            "type" : "UIView",
+            "childorder" : "shadow",
+            "rotate" : "0",
+            "blurIntensity" : "10",
+            "alpha" : "1",
+            "triggerOnWake" : "none",
+            "scale" : "0",
+            "gradientImage" : "none",
+            "maskURL" : "none",
+            "followWidthItem" : "none",
+            "borderColor" : "rgba(255,255,255,0)",
+            "actions" : "none",
+            "userInteraction" : "YES",
+            "animation" : "none",
+            "blurColor" : "dark"
+          }
+        },
+        "blurAlpha" : "0",
+        "cornerRadius" : "5",
+        "type" : "UIView",
+        "childorder" : "Glass,CutShadow",
+        "rotate" : "0",
+        "blurIntensity" : "10",
+        "alpha" : "1",
+        "triggerOnWake" : "none",
+        "scale" : "0",
+        "gradientImage" : "none",
+        "maskURL" : "none",
+        "followWidthItem" : "none",
+        "borderColor" : "rgba(255,255,255,0)",
+        "actions" : "none",
+        "userInteraction" : "YES",
+        "animation" : "none",
+        "blurColor" : "dark"
+      }
+    }
+  }
+}

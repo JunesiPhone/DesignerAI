@@ -1,5 +1,76 @@
 # iOS Font Reference for Designer
 
+## Custom/Third-Party Fonts
+
+### Display & Decorative Fonts
+
+- **2BR_SC.ttf** - Bold decorative font
+- **AAabnes.otf** - Modern sans-serif
+- **AAMulticolore.otf** - Colorful display font
+- **abnes.ttf** - Clean sans-serif
+- **AgafiaRosdina.ttf** - Elegant script font
+- **AlmostJapanese.ttf** - Japanese-inspired font
+- **Artlookin-Regular.ttf** - Artistic display font
+- **Atami-Bold.otf** - Bold modern sans
+- **Atami-Display-Bold.otf** - Display version bold
+- **Atami-Regular.otf** - Clean modern sans
+- **batmfo__.ttf** - Comic/cartoon style
+- **Bebas.ttf** - Condensed sans-serif
+- **bebasbold.otf** - Bold condensed sans
+- **BebasNeue Book.otf** - Book weight Bebas
+- **Bernier.otf** - Decorative font
+- **bikoblack.otf** - Black weight modern sans
+- **bikoregular.otf** - Regular weight modern sans
+- **Bold.ttf** - Generic bold font
+- **building.otf** - Architectural/technical font
+- **Cherry Monospace-Light.ttf** - Light monospace font
+- **chocolatecake.ttf** - Playful display font
+- **climaiconFont.ttf** - Weather icon font
+- **Corporate-Logo-Rounded.ttf** - Rounded corporate font
+- **CovesBold.otf** - Bold serif font
+- **Cubano.ttf** - Bold geometric sans
+- **dead.otf** - Gothic/horror style font
+- **dealerplate_california.otf** - License plate style
+- **digital-7.ttf** - Digital/LCD display font
+- **entypo.otf** - Icon font
+- **Future.ttf** - Futuristic sans-serif
+- **Galyon-Bold.otf** - Bold geometric font
+- **GlacialIndifference-Bold.otf** - Bold minimal sans
+- **GreatVibes-Regular.ttf** - Script/handwriting font
+- **Groovy_Fast.ttf** - Retro display font
+- **gymnast.ttf** - Athletic/sports font
+- **Headache-Font-OTF.otf** - Distressed/grunge font
+- **Heavitas.ttf** - Heavy weight sans
+- **lcd.otf** - LCD/digital display font
+- **LEMONMILK-Bold.otf** - Bold rounded sans
+- **LoveloBlack.otf** - Black weight display font
+- **Mashup.otf** - Mixed style font
+- **mat1.otf** - Technical/industrial font
+- **Mefirah.ttf** - Decorative serif
+- **mikadobold.otf** - Bold Asian-inspired font
+- **mikadoregular.otf** - Regular Asian-inspired font
+- **Net-Carthart.ttf** - Technical/chart font
+- **Neutra.otf** - Neutral sans-serif
+- **Now-Bold.otf** - Bold contemporary sans
+- **perfo.otf** - Perforated/dot matrix style
+- **PhenomenaBlack.otf** - Black weight display font
+- **Plasma09.ttf** - Sci-fi/futuristic font
+- **Poppins-Bold.otf** - Bold geometric sans
+- **ProductSansBold.ttf** - Bold product sans
+- **Ronde-B_square.otf** - Rounded square font
+- **samsungexlight.otf** - Extra light Samsung font
+- **samsunglight.otf** - Light Samsung font
+- **Signatrue.otf** - Signature/script font
+- **Signerica_Fat.ttf** - Fat script font
+- **Street-Robot-Inline.ttf** - Inline robotic font
+- **The Hustle.ttf** - Street/urban font
+- **WindleshamProBold.ttf** - Bold professional font
+- **Young.ttf** - Youthful display font
+- **zephyr_jubilee.ttf** - Celebratory font
+- **Zhai.ttf** - Minimalist font
+- **Zuberfuturefreepromo.ttf** - Futuristic promotional font
+
+
 ## Arabic Fonts
 - **AlNile** - Clean Arabic script font
 - **AlNile-Bold** - Bold weight Arabic script
@@ -220,71 +291,3 @@
 ### Soft/Organic
 - **Primary**: AppleSDGothicNeo-UltraLight (time)
 - **Secondary**: AppleSDGothicNeo-Light (info)
-
-## Custom/Third-Party Fonts
-### Display & Decorative Fonts
-- **2BR_SC.ttf** - Bold decorative font
-- **AAabnes.otf** - Modern sans-serif
-- **AAMulticolore.otf** - Colorful display font
-- **abnes.ttf** - Clean sans-serif
-- **AgafiaRosdina.ttf** - Elegant script font
-- **AlmostJapanese.ttf** - Japanese-inspired font
-- **Artlookin-Regular.ttf** - Artistic display font
-- **Atami-Bold.otf** - Bold modern sans
-- **Atami-Display-Bold.otf** - Display version bold
-- **Atami-Regular.otf** - Clean modern sans
-- **batmfo__.ttf** - Comic/cartoon style
-- **Bebas.ttf** - Condensed sans-serif
-- **bebasbold.otf** - Bold condensed sans
-- **BebasNeue Book.otf** - Book weight Bebas
-- **Bernier.otf** - Decorative font
-- **bikoblack.otf** - Black weight modern sans
-- **bikoregular.otf** - Regular weight modern sans
-- **Bold.ttf** - Generic bold font
-- **building.otf** - Architectural/technical font
-- **Cherry Monospace-Light.ttf** - Light monospace font
-- **chocolatecake.ttf** - Playful display font
-- **climaiconFont.ttf** - Weather icon font
-- **Corporate-Logo-Rounded.ttf** - Rounded corporate font
-- **CovesBold.otf** - Bold serif font
-- **Cubano.ttf** - Bold geometric sans
-- **dead.otf** - Gothic/horror style font
-- **dealerplate_california.otf** - License plate style
-- **digital-7.ttf** - Digital/LCD display font
-- **entypo.otf** - Icon font
-- **Future.ttf** - Futuristic sans-serif
-- **Galyon-Bold.otf** - Bold geometric font
-- **GlacialIndifference-Bold.otf** - Bold minimal sans
-- **GreatVibes-Regular.ttf** - Script/handwriting font
-- **Groovy_Fast.ttf** - Retro display font
-- **gymnast.ttf** - Athletic/sports font
-- **Headache-Font-OTF.otf** - Distressed/grunge font
-- **Heavitas.ttf** - Heavy weight sans
-- **lcd.otf** - LCD/digital display font
-- **LEMONMILK-Bold.otf** - Bold rounded sans
-- **LoveloBlack.otf** - Black weight display font
-- **Mashup.otf** - Mixed style font
-- **mat1.otf** - Technical/industrial font
-- **Mefirah.ttf** - Decorative serif
-- **mikadobold.otf** - Bold Asian-inspired font
-- **mikadoregular.otf** - Regular Asian-inspired font
-- **Net-Carthart.ttf** - Technical/chart font
-- **Neutra.otf** - Neutral sans-serif
-- **Now-Bold.otf** - Bold contemporary sans
-- **perfo.otf** - Perforated/dot matrix style
-- **PhenomenaBlack.otf** - Black weight display font
-- **Plasma09.ttf** - Sci-fi/futuristic font
-- **Poppins-Bold.otf** - Bold geometric sans
-- **ProductSansBold.ttf** - Bold product sans
-- **Ronde-B_square.otf** - Rounded square font
-- **samsungexlight.otf** - Extra light Samsung font
-- **samsunglight.otf** - Light Samsung font
-- **Signatrue.otf** - Signature/script font
-- **Signerica_Fat.ttf** - Fat script font
-- **Street-Robot-Inline.ttf** - Inline robotic font
-- **The Hustle.ttf** - Street/urban font
-- **WindleshamProBold.ttf** - Bold professional font
-- **Young.ttf** - Youthful display font
-- **zephyr_jubilee.ttf** - Celebratory font
-- **Zhai.ttf** - Minimalist font
-- **Zuberfuturefreepromo.ttf** - Futuristic promotional font

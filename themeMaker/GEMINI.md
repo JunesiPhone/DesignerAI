@@ -66,7 +66,7 @@ To show dynamic information like time, date, or weather, use special data placeh
 -   Battery: `[batterypercent]`
 -   Weather: `[temperature]`, `[temptype]`, `[condition]`, `[windspeed]`, `[windunit]`
 
-**Note**: When making a theme grep to make sure the data value is correct and will pull the right data. All of them are in the `training data/data.txt` file.
+**Note**: When making a theme grep to make sure the data value is correct and will pull the right data. All of them are in the `training_data/data.txt` file.
 
 ## 5. Styling and Visuals
 
@@ -80,7 +80,7 @@ To show dynamic information like time, date, or weather, use special data placeh
 
 -   **`fontName`**: Specify the font file (e.g., `"Bebas.ttf"`).
 -   **`fontSize`**: The size of the font.
--   **CRITICAL**: You must use fonts available in the Designer system. Refer to `training data/fonts.txt` for a list of valid font names.
+-   **CRITICAL**: You must use fonts available in the Designer system. Refer to `training_data/fonts.txt` for a list of valid font names.
 
 ### Other Visual Properties:
 
@@ -92,7 +92,7 @@ To show dynamic information like time, date, or weather, use special data placeh
 
 ## 6. How to Create a New Theme: Step-by-Step
 
-1.  **Review References**: Look at the `.json` files in the `theme references/` folder to understand the structure and available properties. `JN07.json` and `JN33.json` are great starting points.
+1.  **Review References**: Look at the `.json` files in the `theme_references/` folder to understand the structure and available properties. `JN07.json` and `JN33.json` are great starting points.
 2.  **Create a New File**: Create a new file in the `AIThemes/` directory. The name must start with a leading underscore and end with a random number to ensure uniqueness (e.g., `_MyCoolTheme847.json`).
 3.  **Start with `PresetView`**: Begin your file with the standard `PresetView` structure.
 4.  **Add UI Elements**:
@@ -110,7 +110,7 @@ By following these guidelines and using the provided reference files, you can cr
 
 ## 7. Critical Component Implementations
 
-Certain components require a very specific structure. Always refer to the `theme references/` folder for a working example before implementing them.
+Certain components require a very specific structure. Always refer to the `theme_references/` folder for a working example before implementing them.
 
 ### Weather Icons
 
