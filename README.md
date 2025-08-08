@@ -25,8 +25,11 @@ themeMaker/
 ## Usage
 
 git clone this repo
+
 go to the themeMaker directory
+
 launch claude in that directory
+
 prompt claude to make a theme
 
 ## How it was created
